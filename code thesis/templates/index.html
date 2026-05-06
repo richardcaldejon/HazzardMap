@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Earthquake Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<style>
+
+/* ================= BASE ================= */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    font-family: Arial;
+    background: #000;
+    overflow: hidden;
+}
+
+/* ================= LOADING OVERLAY ================= */
+#loading-overlay {
+    position: fixed;
+    inset: 0;                   /* shorthand for top/right/bottom/left: 0 */
+    width: 100%;                /* explicit width for mobile browsers */
+    height: 100%;               /* explicit height for mobile browsers */
+    background: #000;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(6px, 2vh, 14px);
+    padding: clamp(16px, 4vw, 32px);
+    overflow: hidden;
+    touch-action: none;
+    pointer-events: all;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loading-icon {
+    line-height: 1;
+    flex-shrink: 0;
+    animation: pulse-icon 1.4s ease-in-out infinite;
+}
+
+.loading-logo {
+    width: clamp(60px, 18vw, 100px);
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+@keyframes pulse-icon {
+    0%, 100% { transform: scale(1);    opacity: 1; }
+    50%       { transform: scale(1.15); opacity: 0.55; }
+}
+
+.loading-ring {
+    width: clamp(32px, 8vw, 46px);
+    height: clamp(32px, 8vw, 46px);
+    border: 3px solid #1e1e1e;
+    border-top: 3px solid #ff5500;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: spin 0.85s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-title {
+    color: #fff;
+    font-size: clamp(14px, 4vw, 20px);
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.loading-sub {
+    color: #555;
+    font-size: clamp(11px, 3vw, 13px);
+    text-align: center;
+    margin: 0;
+    line-height: 1.3;
+    flex-shrink: 0;
+}
+
+.loading-bar-wrap {
+    width: clamp(140px, 60vw, 240px);
+    background: #181818;
+    border-radius: 4px;
+    height: 3px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.loading-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff5500, #ffaa00);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+/* ================= MAP ================= */
+#map {
+    flex: 2;
+    height: 100vh;
+    position: relative;
+}
+
+#legend {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    padding: 10px 12px;
+    font-size: 12px;
+    border-radius: 8px;
+    z-index: 1000;
+    line-height: 1.8;
+    width: 190px;
+    pointer-events: none;
+}
+
+/* ================= SIDEBAR ================= */
+#sidebar {
+    flex: 1;
+    background: #111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h3 {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #222;
+}
+
+#list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.section {
+    margin-bottom: 10px;
+    border: 1px solid #222;
+    border-radius: 6px;
+}
+
+.header {
+    background: #1a1a1a;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.items {
+    display: none;
+    padding: 8px;
+}
+
+.eq-item {
+    padding: 10px;
+    margin-bottom: 8px;
+    background: #1e1e1e;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.eq-item:hover { background: #2a2a2a; }
+
+.title  { font-size: 14px; }
+.small  { font-size: 12px; color: #aaa; }
+
+.leaflet-control-custom {
+    background: white;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* ================= FAULT TOGGLE BUTTON ================= */
+#faultToggleBtn {
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.82);
+    color: #ff8c42;
+    border: 1px solid #ff8c42;
+    padding: 7px 13px;
+    font-size: 12px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: Arial;
+    transition: background 0.2s, color 0.2s;
+    letter-spacing: 0.03em;
+}
+#faultToggleBtn:hover {
+    background: #ff8c42;
+    color: #000;
+}
+#faultToggleBtn.off {
+    color: #555;
+    border-color: #333;
+}
+
+/* ================= BURGER ================= */
+#burger {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    left: auto;
+    z-index: 2000;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid #333;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+    line-height: 1;
+}
+
+/* ================= NOTIFICATIONS ================= */
+#notif-container {
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: min(420px, calc(100vw - 24px));
+    padding: 0;
+    pointer-events: none;
+}
+
+.notif {
+    pointer-events: all;
+    position: relative;
+    background: rgba(15, 15, 15, 0.96);
+    color: #fff;
+    padding: 12px 14px 14px 16px;
+    border-radius: 10px;
+    border-left: 5px solid var(--notif-color, #00b7ff);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+    user-select: none;
+    touch-action: pan-y;
+    overflow: hidden;
+    max-height: 120px;
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease,
+        max-height 0.35s ease,
+        margin 0.35s ease,
+        padding 0.35s ease;
+}
+
+.notif.entering { transform: translateY(-18px); opacity: 0; }
+.notif.visible  { transform: translateY(0); opacity: 1; }
+.notif.swiping  { transition: transform 0.08s linear; }
+.notif.removing {
+    transform: translateX(110%);
+    opacity: 0;
+    max-height: 0 !important;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.notif-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.notif-mag   { font-size: 14px; font-weight: bold; }
+
+.notif-close {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 2px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.notif-close:hover { color: #fff; }
+
+.notif-place {
+    font-size: 12px;
+    color: #ccc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notif-meta { font-size: 11px; color: #888; }
+.notif-hint { font-size: 10px; color: #555; margin-top: 2px; }
+
+.notif-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: var(--notif-color, #00b7ff);
+    opacity: 0.6;
+    width: 100%;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+    #burger { display: block; }
+
+    /* Map fills the full screen on mobile */
+    #map {
+        flex: none;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh; /* dynamic viewport height for mobile browsers */
+    }
+
+    #sidebar {
+        position: fixed;  /* fixed instead of absolute for better mobile behavior */
+        right: -100%;
+        left: auto;
+        top: 0;
+        width: min(85%, 320px); /* cap the max width */
+        height: 100%;
+        height: 100dvh;
+        z-index: 1500;
+        transition: right 0.3s ease;
+    }
+
+    #sidebar.active { right: 0; }
+
+    #notif-container {
+        top: 8px;
+        width: calc(100vw - 24px);
+        left: 12px;
+        transform: none;
+    }
+
+    .notif { padding: 10px 12px 12px 14px; }
+    .notif-place { font-size: 11px; }
+    .notif-hint  { display: none; }
+
+    #faultToggleBtn {
+        bottom: calc(env(safe-area-inset-bottom, 0px) + 16px);
+        left: 10px;
+    }
+
+    #legend {
+        bottom: calc(env(safe-area-inset-bottom, 0px) + 60px);
+        right: 10px;
+        font-size: 11px;
+        width: 160px;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .notif-mag  { font-size: 13px; }
+    .notif-meta { font-size: 10px; }
+
+    #faultToggleBtn {
+        bottom: calc(env(safe-area-inset-bottom, 0px) + 14px);
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+    #legend {
+        bottom: calc(env(safe-area-inset-bottom, 0px) + 56px);
+        font-size: 10px;
+        width: 145px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- LOADING OVERLAY -->
+<div id="loading-overlay">
+    <div class="loading-icon">
+        <img src="asset/logo.png" alt="Loading" class="loading-logo" />
+    </div>
+    <div class="loading-ring"></div>
+    <div class="loading-title">Earthquake Dashboard</div>
+    <div class="loading-sub" id="loading-sub">Loading fault lines…</div>
+    <div class="loading-bar-wrap">
+        <div class="loading-bar" id="loading-bar"></div>
+    </div>
+</div>
+
+<!-- MAP -->
+<div id="map">
+    <div id="legend">
+        <b>Earthquakes</b><br>
+        <span style="color:#ff4444">●</span> M5+ Strong<br>
+        <span style="color:#ffd000">●</span> M3–4.9 Moderate<br>
+        <span style="color:#00b7ff">●</span> M&lt;3 Weak<br>
+        <br>
+        <b>Fault Lines</b><br>
+        <span style="color:#ff5500">—</span> Active Fault<br>
+        <span style="color:#ffaa00">- -</span> Potentially Active<br>
+        <span style="color:#ffee00; font-size:10px; opacity:0.8">— Highlighted on hover</span>
+    </div>
+
+    <button id="faultToggleBtn" onclick="toggleFaultLayer()">⚡ Fault Lines: ON</button>
+</div>
+
+<!-- SIDEBAR -->
+<div id="sidebar">
+    <h3>
+        Earthquake Dashboard
+        <span id="apiStatus" style="
+            display:inline-block;
+            width:10px; height:10px;
+            border-radius:50%;
+            background:gray;
+            margin-left:8px;
+            box-shadow:0 0 6px rgba(255,255,255,0.3);
+        "></span>
+        <span id="lastUpdated" style="
+            font-size:10px;
+            color:#555;
+            font-weight:normal;
+            margin-left:8px;
+        "></span>
+    </h3>
+    <div id="list"></div>
+</div>
+
+<!-- BURGER -->
+<button id="burger">☰</button>
+
+<!-- NOTIFICATIONS -->
+<div id="notif-container"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+
+// ================= MAP INIT =================
+var map = L.map('map').setView([16.0, 121.0], 8);
+
+L.tileLayer(
+    'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+    { attribution: '&copy; OpenStreetMap &amp; CARTO' }
+).addTo(map);
+
+// ================= STATE =================
+let markers         = {};
+let lastData        = null;
+let lastDataHash    = null;
+let grouped         = {};
+let isFlying        = false;
+let currentMarker   = null;
+let activeWaves     = [];
+let epicenterMarker = null;
+let waveLoop        = null;
+let _notifCount     = 0;
+let _notifiedIds    = new Set();
+let _dismissedIds   = new Set();
+let _reminderTimer  = null;
+let _sseSource      = null;
+let _faultsReady    = false;
+
+// ================= FAULT LAYER STATE =================
+let faultLayerGroup    = null;
+let faultHitLayerGroup = null;
+let faultVisible       = true;
+
+// ================= LOADING OVERLAY =================
+function setLoadingText(text) {
+    let el = document.getElementById('loading-sub');
+    if (el) el.textContent = text;
+}
+
+function setLoadingProgress(pct) {
+    let bar = document.getElementById('loading-bar');
+    if (bar) bar.style.width = pct + '%';
+}
+
+function hideLoading() {
+    let overlay = document.getElementById('loading-overlay');
+    if (overlay) overlay.classList.add('hidden');
+    document.body.style.overflow = '';
+    _faultsReady = true;
+
+    if (lastData) {
+        let remaining = msUntilNextReminder();
+        if (remaining > 0) {
+            scheduleReminder(lastData);
+        } else {
+            showReminderNotifs(lastData);
+            scheduleReminder(lastData);
+        }
+    }
+}
+
+// ================= FAULT STYLE =================
+function getFaultStyle(feature) {
+    let p           = feature.properties || {};
+    let isPotential = (p["Category"] || '').includes('Potential');
+    return {
+        color:     isPotential ? '#ffaa00' : '#ff5500',
+        weight:    isPotential ? 1.2 : 1.8,
+        opacity:   isPotential ? 0.6 : 0.82,
+        dashArray: isPotential ? '6,4' : null
+    };
+}
+
+// ================= FAULT LINES LOADER =================
+function buildPopupContent(p) {
+    let faultName   = p["Fault Name"]  || 'Unknown';
+    let segmentName = p["Segment Name"] || 'Main Trace';
+    let dateMapped  = p["Date Mapped"]  || '—';
+    let dataSource  = p["Data Source"]  || 'PHIVOLCS-DOST';
+    let category    = p["Category"]     || 'Active Fault';
+    let isPotential = category.includes('Potential');
+    let headerColor = isPotential ? '#ffaa00' : '#ff5500';
+    let icon        = isPotential ? '⚠️' : '⚡';
+    let catBadge    =
+        "<span style='background:" + headerColor + "22; color:" + headerColor + ";" +
+        "font-size:10px; padding:1px 6px; border-radius:3px; border:1px solid " + headerColor + "55;'>" +
+        category + "</span>";
+    return (
+        "<div style='font-family:Arial; min-width:190px; max-width:260px;'>" +
+        "<div style='font-weight:bold; color:" + headerColor + "; font-size:13px; margin-bottom:5px;'>" +
+            icon + " " + faultName +
+        "</div>" +
+        catBadge +
+        "<table style='font-size:11px; color:#222; border-collapse:collapse; width:100%; margin-top:8px;'>" +
+        "<tr><td style='color:#666; padding:3px 10px 3px 0; white-space:nowrap;'>Fault Name</td>" +
+            "<td style='font-weight:bold;'>" + faultName + "</td></tr>" +
+        "<tr><td style='color:#666; padding:3px 10px 3px 0;'>Segment Name</td>" +
+            "<td>" + segmentName + "</td></tr>" +
+        "<tr><td style='color:#666; padding:3px 10px 3px 0;'>Date Mapped</td>" +
+            "<td>" + dateMapped + "</td></tr>" +
+        "<tr><td style='color:#666; padding:3px 10px 3px 0;'>Data Source</td>" +
+            "<td>" + dataSource + "</td></tr>" +
+        "</table>" +
+        "<div style='font-size:10px; color:#999; margin-top:6px; border-top:1px solid #eee; padding-top:4px;'>" +
+            "Source: PHIVOLCS-DOST GeoRisk PH" +
+        "</div>" +
+        "</div>"
+    );
+}
+
+function loadFaultLines(geojson) {
+    if (faultLayerGroup)    map.removeLayer(faultLayerGroup);
+    if (faultHitLayerGroup) map.removeLayer(faultHitLayerGroup);
+
+    // Visible styled layer (no popup — hit layer handles clicks)
+    faultLayerGroup = L.geoJSON(geojson, {
+        style: getFaultStyle,
+        onEachFeature: function(feature, layer) {
+            let p = feature.properties || {};
+
+            let faultName   = p["Fault Name"]  || 'Unknown';
+            let segmentName = p["Segment Name"] || 'Main Trace';
+            let dateMapped  = p["Date Mapped"]  || '—';
+            let dataSource  = p["Data Source"]  || 'PHIVOLCS-DOST';
+            let category    = p["Category"]     || 'Active Fault';
+            let isPotential = category.includes('Potential');
+            let headerColor = isPotential ? '#ffaa00' : '#ff5500';
+            let icon        = isPotential ? '⚠️' : '⚡';
+
+            let catBadge =
+                "<span style='background:" + headerColor + "22; color:" + headerColor + ";" +
+                "font-size:10px; padding:1px 6px; border-radius:3px; border:1px solid " + headerColor + "55;'>" +
+                category + "</span>";
+
+            layer.on('mouseover', function() {
+                layer.setStyle({ color: '#ffee00', weight: 3, opacity: 1 });
+                layer.bringToFront();
+            });
+            layer.on('mouseout', function() {
+                faultLayerGroup.resetStyle(layer);
+            });
+        }
+    });
+
+    // Invisible wide hit-area layer — 20px wide for easy tapping on mobile
+    faultHitLayerGroup = L.geoJSON(geojson, {
+        style: function() {
+            return { color: 'transparent', weight: 20, opacity: 0.001, fillOpacity: 0 };
+        },
+        onEachFeature: function(feature, layer) {
+            let p = feature.properties || {};
+            layer.bindPopup(buildPopupContent(p), { maxWidth: 280 });
+            // Mirror highlight onto the visible layer on touch/hover
+            layer.on('mouseover click', function() {
+                faultLayerGroup.eachLayer(function(vl) {
+                    if (vl.feature === feature) {
+                        vl.setStyle({ color: '#ffee00', weight: 3, opacity: 1 });
+                        vl.bringToFront();
+                    }
+                });
+            });
+            layer.on('mouseout popupclose', function() {
+                faultLayerGroup.resetStyle();
+            });
+        }
+    });
+
+    if (faultVisible) {
+        faultLayerGroup.addTo(map);
+        faultHitLayerGroup.addTo(map);
+    }
+    console.log('[Faults] Loaded', geojson.features ? geojson.features.length : 0, 'fault features');
+}
+
+// ================= FAULT TOGGLE =================
+function toggleFaultLayer() {
+    let btn = document.getElementById('faultToggleBtn');
+    if (!faultLayerGroup) return;
+
+    if (faultVisible) {
+        map.removeLayer(faultLayerGroup);
+        if (faultHitLayerGroup) map.removeLayer(faultHitLayerGroup);
+        faultVisible = false;
+        btn.textContent = '⚡ Fault Lines: OFF';
+        btn.classList.add('off');
+    } else {
+        faultLayerGroup.addTo(map);
+        if (faultHitLayerGroup) faultHitLayerGroup.addTo(map);
+        faultVisible = true;
+        btn.textContent = '⚡ Fault Lines: ON';
+        btn.classList.remove('off');
+    }
+}
+
+// ================= FAULT LOAD =================
+function loadFaultAsync() {
+    setLoadingText('Loading fault lines…');
+    setLoadingProgress(10);
+
+    fetch('/fault.json')
+        .then(function(r) {
+            if (!r.ok) throw new Error('fault.json not found (' + r.status + ')');
+            setLoadingProgress(50);
+            setLoadingText('Parsing fault data…');
+            return r.json();
+        })
+        .then(function(data) {
+            setLoadingProgress(80);
+            setLoadingText('Rendering fault lines…');
+            setTimeout(function() {
+                loadFaultLines(data);
+                setLoadingProgress(100);
+                setTimeout(hideLoading, 400);
+            }, 80);
+        })
+        .catch(function(err) {
+            console.warn('[Faults] Could not load fault.json:', err.message);
+            document.getElementById('faultToggleBtn').style.display = 'none';
+            setLoadingText('Fault lines unavailable');
+            setLoadingProgress(100);
+            setTimeout(hideLoading, 800);
+        });
+}
+
+if (window.requestIdleCallback) {
+    requestIdleCallback(loadFaultAsync, { timeout: 3000 });
+} else {
+    setTimeout(loadFaultAsync, 500);
+}
+
+// ================= HELPERS =================
+function getIntensityColor(mag) {
+    if (mag >= 5) return "#ff4444";
+    if (mag >= 3) return "#ffd000";
+    return "#00b7ff";
+}
+
+function getNotifDuration(mag) {
+    if (mag >= 5) return 30000;
+    if (mag >= 3) return 15000;
+    return 8000;
+}
+
+function magLabel(mag) {
+    if (mag >= 5) return "Strong";
+    if (mag >= 3) return "Moderate";
+    return "Weak";
+}
+
+function quickHash(data) {
+    if (!data || !data.length) return "";
+    let first = data[0];
+    return (first.time || "") + "|" + (first.place || "") + "|" + data.length;
+}
+
+function updateLastUpdatedLabel() {
+    let el = document.getElementById("lastUpdated");
+    if (el) el.textContent = "Updated " + new Date().toLocaleTimeString();
+}
+
+// ================= NOTIFICATION SYSTEM =================
+function removeNotif(id, e) {
+    if (e) e.stopPropagation();
+    let el = document.getElementById(id);
+    if (!el || el.dataset.removing) return;
+    if (el.dataset.uid) _dismissedIds.add(el.dataset.uid);
+    el.dataset.removing = "1";
+    el.classList.add("removing");
+    setTimeout(() => { if (el.parentNode) el.parentNode.removeChild(el); }, 400);
+}
+
+function attachSwipe(el, id, eq, key) {
+    let startX = 0, curX = 0, dragging = false, didSwipe = false;
+
+    function onStart(e) {
+        startX = e.touches ? e.touches[0].clientX : e.clientX;
+        curX = 0; dragging = true; didSwipe = false;
+        el.classList.add("swiping");
+    }
+
+    function onMove(e) {
+        if (!dragging) return;
+        curX = (e.touches ? e.touches[0].clientX : e.clientX) - startX;
+        el.style.transform = "translateX(" + curX + "px)";
+        if (Math.abs(curX) > 8) didSwipe = true;
+    }
+
+    function onEnd() {
+        if (!dragging) return;
+        dragging = false;
+        el.classList.remove("swiping");
+        if (Math.abs(curX) > 80) {
+            let dir = curX > 0 ? 1 : -1;
+            el.style.transition = "transform 0.2s ease, opacity 0.2s ease";
+            el.style.transform  = "translateX(" + (dir * 120) + "%)";
+            el.style.opacity    = "0";
+            setTimeout(() => removeNotif(id), 200);
+        } else {
+            el.style.transform = "";
+        }
+        curX = 0;
+        setTimeout(() => { didSwipe = false; }, 80);
+    }
+
+    el.addEventListener("touchstart", onStart, { passive: true });
+    el.addEventListener("touchmove",  onMove,  { passive: true });
+    el.addEventListener("touchend",   onEnd);
+    el.addEventListener("mousedown",  onStart);
+    window.addEventListener("mousemove", e => dragging && onMove(e));
+    window.addEventListener("mouseup", onEnd);
+
+    el.addEventListener("click", function (e) {
+        if (didSwipe) return;
+        if (e.target.classList.contains("notif-close")) return;
+        if (el.dataset.uid) _dismissedIds.add(el.dataset.uid);
+        removeNotif(id);
+        focusMarker(key);
+    });
+}
+
+function showNotif(eq, key) {
+    let mag   = parseFloat(eq.magnitude) || 1;
+    let color = getIntensityColor(mag);
+    let dur   = getNotifDuration(mag);
+    let id    = "notif-" + _notifCount++;
+    let uid   = eq.time + eq.place;
+    let time  = new Date(eq.time).toLocaleTimeString();
+
+    let container = document.getElementById("notif-container");
+    let el = document.createElement("div");
+    el.className = "notif entering";
+    el.id = id;
+    el.dataset.uid = uid;
+    el.style.setProperty("--notif-color", color);
+
+    el.innerHTML =
+        "<div class='notif-header'>" +
+            "<span class='notif-mag'>M " + mag.toFixed(1) +
+                " &nbsp;·&nbsp; " + magLabel(mag) +
+            "</span>" +
+            "<button class='notif-close' onclick='removeNotif(\"" + id + "\",event)'>&#x2715;</button>" +
+        "</div>" +
+        "<div class='notif-place'>" + (eq.place || "Unknown location") + "</div>" +
+        "<div class='notif-meta'>Depth: " + (eq.depth_km || "?") + " km &nbsp;·&nbsp; " + time + "</div>" +
+        "<div class='notif-hint'>Tap to view on map &nbsp;·&nbsp; swipe to dismiss</div>" +
+        "<div class='notif-bar' id='bar-" + id + "'></div>";
+
+    attachSwipe(el, id, eq, key);
+    container.appendChild(el);
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            el.classList.remove("entering");
+            el.classList.add("visible");
+
+            let bar = document.getElementById("bar-" + id);
+            if (bar) {
+                bar.style.width = "100%";
+                setTimeout(() => {
+                    bar.style.transition = "width " + dur + "ms linear";
+                    bar.style.width = "0%";
+                }, 400);
+                bar.addEventListener("transitionend", (e) => {
+                    if (e.propertyName === "width") removeNotif(id);
+                });
+            }
+        });
+    });
+}
+
+function notifyRecent(data) {
+    let newOnes = [];
+    data.forEach((eq, i) => {
+        let uid = eq.time + eq.place;
+        if (_notifiedIds.has(uid)) return;
+        _notifiedIds.add(uid);
+        newOnes.push({ eq, key: "recent-" + i });
+    });
+    newOnes.slice(0, 5).forEach(({ eq, key }, i) => {
+        setTimeout(() => showNotif(eq, key), i * 600);
+    });
+}
+
+// ================= 5-MINUTE REMINDER =================
+const REMINDER_INTERVAL = 5 * 60 * 1000;
+
+function msUntilNextReminder() {
+    let last = parseInt(sessionStorage.getItem("lastNotifTime") || "0", 10);
+    if (!last) return 0;
+    let elapsed = Date.now() - last;
+    return elapsed >= REMINDER_INTERVAL ? 0 : REMINDER_INTERVAL - elapsed;
+}
+
+function saveNotifTime() {
+    sessionStorage.setItem("lastNotifTime", String(Date.now()));
+}
+
+function showReminderNotifs(data) {
+    _dismissedIds.clear();
+    data.slice(0, 3).forEach((eq, i) => {
+        setTimeout(() => showNotif(eq, "recent-" + i), i * 600);
+    });
+    saveNotifTime();
+}
+
+function scheduleReminder(data) {
+    if (_reminderTimer) clearTimeout(_reminderTimer);
+    let delay   = msUntilNextReminder();
+    let waitFor = delay > 0 ? delay : REMINDER_INTERVAL;
+    _reminderTimer = setTimeout(() => {
+        showReminderNotifs(data);
+        scheduleReminder(data);
+    }, waitFor);
+}
+
+// ================= WAVE ANIMATION =================
+function startWaveLoop(center, eq) {
+    if (waveLoop) clearInterval(waveLoop);
+    activeWaves.forEach(w => map.removeLayer(w));
+    activeWaves = [];
+    if (epicenterMarker) map.removeLayer(epicenterMarker);
+
+    let mag       = eq.magnitude || 4.5;
+    let waveColor = getIntensityColor(mag);
+
+    epicenterMarker = L.circleMarker(center, {
+        radius: 3 + mag,
+        color: waveColor,
+        fillColor: waveColor,
+        fillOpacity: 0.9,
+        weight: 1
+    }).addTo(map);
+
+    function spawnWave(delay) {
+        setTimeout(() => {
+            let start     = performance.now();
+            let duration  = 5000;
+            let maxRadius = 12000 + mag * 4000;
+
+            let wave = L.circle(center, {
+                radius: 0,
+                color: waveColor,
+                fill: false,
+                weight: 2,
+                opacity: 1
+            }).addTo(map);
+
+            activeWaves.push(wave);
+
+            function animate(now) {
+                let t = (now - start) / duration;
+                if (t >= 1) { map.removeLayer(wave); return; }
+                wave.setRadius(maxRadius * t);
+                wave.setStyle({ opacity: Math.exp(-3 * t) });
+                requestAnimationFrame(animate);
+            }
+
+            requestAnimationFrame(animate);
+        }, delay);
+    }
+
+    function cycle() { spawnWave(0); spawnWave(2000); }
+    cycle();
+    waveLoop = setInterval(cycle, 4500);
+}
+
+// ================= FOCUS MARKER =================
+function focusMarker(key) {
+    let m = markers[key];
+    if (!m) return;
+
+    if (window.innerWidth <= 768 && sidebarOpen) {
+        sidebar.classList.remove("active");
+        sidebarOpen = false;
+        updateBurger();
+    }
+
+    isFlying = true;
+    if (currentMarker) map.removeLayer(currentMarker);
+    currentMarker = m.addTo(map);
+
+    map.flyTo(m.getLatLng(), 11, { animate: true, duration: 1.2 });
+
+    let done = false;
+    const finish = () => {
+        if (done) return;
+        done = true;
+        isFlying = false;
+        startWaveLoop(m.getLatLng(), { magnitude: m.options.magnitude || 4.5 });
+        setTimeout(() => m.openPopup(), 150);
+    };
+
+    map.once("moveend", finish);
+    setTimeout(finish, 2000);
+}
+
+// ================= RENDER RECENT =================
+function renderRecent(data) {
+    let list      = document.getElementById("list");
+    let section   = createSection("Recent 20 Earthquakes");
+    let container = section.querySelector(".items");
+    container.style.display = "block";
+
+    data.forEach((eq, i) => {
+        if (!eq.latitude || !eq.longitude) return;
+
+        let key   = "recent-" + i;
+        let mag   = parseFloat(eq.magnitude) || 1;
+        let color = getIntensityColor(mag);
+
+        let marker = L.circleMarker([eq.latitude, eq.longitude], {
+            radius: mag * 2,
+            color: color,
+            fillColor: color,
+            fillOpacity: 0.85,
+            weight: 1
+        });
+
+        marker.options.magnitude = mag;
+        marker.bindPopup(
+            "<div style='border-left:5px solid " + color + "; padding-left:8px'>" +
+            "<b>" + eq.place + "</b><br>" +
+            "Magnitude: " + mag + "<br>" +
+            "Depth: " + eq.depth_km + " km" +
+            "</div>"
+        );
+
+        markers[key] = marker;
+
+        let div = document.createElement("div");
+        div.className = "eq-item";
+        div.style.borderLeft = "4px solid " + color;
+        div.innerHTML =
+            "<div class='title'>M " + mag + " - " + eq.place + "</div>" +
+            "<div class='small'>" + new Date(eq.time).toLocaleString() + "</div>";
+        div.onclick = () => focusMarker(key);
+        container.appendChild(div);
+    });
+
+    list.appendChild(section);
+}
+
+// ================= ARCHIVE =================
+function prepareArchive(data) {
+    grouped = {};
+
+    data.forEach((eq, i) => {
+        let d     = new Date(eq.time);
+        let year  = d.getFullYear();
+        let month = d.toLocaleString('default', { month: 'long' });
+
+        if (!grouped[year])        grouped[year] = {};
+        if (!grouped[year][month]) grouped[year][month] = [];
+
+        grouped[year][month].push({ ...eq, _id: "arch-" + i });
+    });
+
+    let list = document.getElementById("list");
+
+    Object.keys(grouped).sort((a, b) => b - a).forEach(year => {
+        let yearSection = createSection(year);
+
+        yearSection.querySelector(".header").onclick = function () {
+            let items = yearSection.querySelector(".items");
+            if (items.style.display === "block") { items.style.display = "none"; return; }
+            if (items.childElementCount === 0) loadMonths(year, items);
+            items.style.display = "block";
+        };
+
+        list.appendChild(yearSection);
+    });
+}
+
+// ================= MONTHS =================
+function loadMonths(year, container) {
+    Object.keys(grouped[year]).forEach(month => {
+        let monthSection = createSection(month);
+
+        monthSection.querySelector(".header").onclick = function () {
+            let items = monthSection.querySelector(".items");
+            if (items.style.display === "block") { items.style.display = "none"; return; }
+
+            if (items.childElementCount === 0) {
+                let byDay = {};
+                grouped[year][month].forEach(eq => {
+                    let d = new Date(eq.time);
+                    let day = d.getDate();
+                    if (!byDay[day]) byDay[day] = [];
+                    byDay[day].push(eq);
+                });
+
+                let monthIndex = new Date(year + " " + month + " 1").getMonth();
+                let totalDays  = new Date(year, monthIndex + 1, 0).getDate();
+
+                let calWrap = document.createElement("div");
+                calWrap.style.cssText = "padding:6px 4px;";
+
+                let grid = document.createElement("div");
+                grid.style.cssText = "display:grid; grid-template-columns:repeat(7,1fr); gap:4px;";
+
+                let detailPanel = document.createElement("div");
+                detailPanel.style.cssText = "margin-top:8px;";
+
+                let activeCell = null;
+
+                for (let day = 1; day <= totalDays; day++) {
+                    let cell      = document.createElement("div");
+                    let eqs       = byDay[day] || [];
+                    let hasQuakes = eqs.length > 0;
+                    let maxMag    = hasQuakes ? Math.max(...eqs.map(e => parseFloat(e.magnitude) || 0)) : 0;
+                    let color     = hasQuakes ? getIntensityColor(maxMag) : null;
+
+                    cell.style.cssText =
+                        "border-radius:4px; padding:6px 2px; text-align:center;" +
+                        "cursor:" + (hasQuakes ? "pointer" : "default") + ";" +
+                        "font-size:12px;" +
+                        "color:" + (hasQuakes ? color : "#444") + ";" +
+                        "background:" + (hasQuakes ? color + "22" : "transparent") + ";" +
+                        "border:1px solid " + (hasQuakes ? color + "66" : "transparent") + ";" +
+                        "transition:background 0.15s;";
+
+                    cell.textContent = day;
+
+                    if (hasQuakes) {
+                        cell.onmouseenter = () => { if (cell !== activeCell) cell.style.background = color + "44"; };
+                        cell.onmouseleave = () => { if (cell !== activeCell) cell.style.background = color + "22"; };
+
+                        cell.onclick = () => {
+                            if (activeCell && activeCell !== cell) {
+                                let prevColor = activeCell.dataset.color;
+                                activeCell.style.background = prevColor + "22";
+                                activeCell.style.outline = "none";
+                            }
+
+                            if (activeCell === cell) {
+                                cell.style.background = color + "22";
+                                cell.style.outline = "none";
+                                detailPanel.innerHTML = "";
+                                activeCell = null;
+                                return;
+                            }
+
+                            activeCell = cell;
+                            cell.dataset.color = color;
+                            cell.style.background = color + "55";
+                            cell.style.outline = "1px solid " + color;
+                            detailPanel.innerHTML = "";
+
+                            let dayLabel = document.createElement("div");
+                            dayLabel.style.cssText = "font-size:11px; color:#777; margin-bottom:6px; padding-left:2px;";
+                            dayLabel.textContent = eqs.length + " quake" + (eqs.length > 1 ? "s" : "") + " — " + month + " " + day;
+                            detailPanel.appendChild(dayLabel);
+
+                            eqs.forEach(eq => {
+                                let key = eq._id;
+                                let mag = parseFloat(eq.magnitude) || 1;
+                                let c   = getIntensityColor(mag);
+
+                                if (!markers[key]) {
+                                    let marker = L.circleMarker([eq.latitude, eq.longitude], {
+                                        radius: mag * 2, color: c, fillColor: c, fillOpacity: 0.85, weight: 1
+                                    });
+                                    marker.options.magnitude = mag;
+                                    marker.bindPopup(
+                                        "<div style='border-left:5px solid " + c + "; padding-left:8px'>" +
+                                        "<b>" + eq.place + "</b><br>" +
+                                        "Magnitude: " + mag + "<br>" +
+                                        "Depth: " + eq.depth_km + " km</div>"
+                                    );
+                                    markers[key] = marker;
+                                }
+
+                                let row = document.createElement("div");
+                                row.style.cssText =
+                                    "padding:8px; margin-bottom:6px; background:#1e1e1e;" +
+                                    "border-left:3px solid " + c + "; border-radius:4px;" +
+                                    "cursor:pointer; transition:background 0.15s;";
+                                row.innerHTML =
+                                    "<div style='font-size:13px; color:" + c + "; font-weight:bold;'>M " + mag + "</div>" +
+                                    "<div style='font-size:11px; color:#aaa; margin-top:2px;'>" + eq.place + "</div>" +
+                                    "<div style='font-size:10px; color:#666; margin-top:2px;'>" + new Date(eq.time).toLocaleTimeString() + "</div>";
+                                row.onmouseenter = () => row.style.background = "#2a2a2a";
+                                row.onmouseleave = () => row.style.background = "#1e1e1e";
+                                row.onclick = () => focusMarker(key);
+                                detailPanel.appendChild(row);
+                            });
+                        };
+                    }
+
+                    grid.appendChild(cell);
+                }
+
+                calWrap.appendChild(grid);
+                calWrap.appendChild(detailPanel);
+                items.appendChild(calWrap);
+            }
+
+            items.style.display = "block";
+        };
+
+        container.appendChild(monthSection);
+    });
+}
+
+// ================= SECTION HELPER =================
+function createSection(title) {
+    let section = document.createElement("div");
+    section.className = "section";
+    let header = document.createElement("div");
+    header.className = "header";
+    header.innerText = title;
+    let items = document.createElement("div");
+    items.className = "items";
+    section.appendChild(header);
+    section.appendChild(items);
+    return section;
+}
+
+// ================= API STATUS =================
+function setApiStatus(status) {
+    let el = document.getElementById("apiStatus");
+    if (status === "online") {
+        el.style.background = "#00ff66";
+        el.style.boxShadow  = "0 0 8px #00ff66";
+    } else {
+        el.style.background = "#ff3b3b";
+        el.style.boxShadow  = "0 0 8px #ff3b3b";
+    }
+}
+
+// ================= DASHBOARD REFRESH =================
+function refreshDashboard(data) {
+    Object.values(markers).forEach(m => map.removeLayer(m));
+    markers = {};
+    document.getElementById("list").innerHTML = "";
+    renderRecent(data.slice(0, 20));
+    prepareArchive(data);
+}
+
+// ================= HANDLE INCOMING DATA =================
+function handleNewData(data, apiOnline) {
+    let hash = quickHash(data);
+    if (hash === lastDataHash) return;
+
+    let isFirstLoad = lastData === null;
+    lastData     = data;
+    lastDataHash = hash;
+
+    setApiStatus(apiOnline ? "online" : "offline");
+    refreshDashboard(data);
+    updateLastUpdatedLabel();
+
+    data.forEach(eq => _notifiedIds.add(eq.time + eq.place));
+
+    if (!_faultsReady) return;
+
+    if (isFirstLoad) {
+        let remaining = msUntilNextReminder();
+        if (remaining > 0) {
+            scheduleReminder(data);
+        } else {
+            showReminderNotifs(data);
+            scheduleReminder(data);
+        }
+    } else {
+        notifyRecent(data);
+        scheduleReminder(data);
+    }
+}
+
+// ================= REAL-TIME SSE =================
+function connectSSE() {
+    if (_sseSource) _sseSource.close();
+
+    _sseSource = new EventSource("/stream");
+
+    _sseSource.onopen = () => {
+        console.log("[SSE] Connected ✅");
+        setApiStatus("online");
+    };
+
+    _sseSource.onmessage = (e) => {
+        try {
+            let msg = JSON.parse(e.data);
+            if (msg.event === "data")   handleNewData(msg.data, msg.API_ONLINE);
+            if (msg.event === "status") setApiStatus(msg.API_ONLINE ? "online" : "offline");
+        } catch (err) {
+            console.error("[SSE] Parse error:", err);
+        }
+    };
+
+    _sseSource.onerror = () => {
+        console.warn("[SSE] Disconnected — reconnecting in 5s...");
+        setApiStatus("offline");
+        _sseSource.close();
+        setTimeout(connectSSE, 5000);
+    };
+}
+
+// ================= MY LOCATION BUTTON =================
+let myLocationControl = L.control({ position: 'topleft' });
+
+myLocationControl.onAdd = function () {
+    let div = L.DomUtil.create('div', 'leaflet-control-custom');
+    div.innerHTML = "📍";
+    div.style.cssText = "background:white;padding:6px 10px;cursor:pointer;border-radius:6px;font-size:12px;box-shadow:0 2px 6px rgba(0,0,0,0.3);";
+
+    div.onclick = function () {
+        if (!navigator.geolocation) { alert("Geolocation not supported"); return; }
+        navigator.geolocation.getCurrentPosition(pos => {
+            let lat = pos.coords.latitude;
+            let lng = pos.coords.longitude;
+            map.flyTo([lat, lng], 14, { animate: true, duration: 1.2 });
+            map.once("moveend", () => {
+                if (window._myLocationMarker) map.removeLayer(window._myLocationMarker);
+                window._myLocationMarker = L.marker([lat, lng])
+                    .addTo(map)
+                    .bindPopup("📍 You are here")
+                    .openPopup();
+            });
+        }, () => alert("Unable to get location"));
+    };
+
+    return div;
+};
+
+myLocationControl.addTo(map);
+
+// ================= BURGER TOGGLE =================
+const burger  = document.getElementById("burger");
+const sidebar = document.getElementById("sidebar");
+let sidebarOpen = false;
+
+function updateBurger() {
+    burger.innerHTML     = "☰";
+    burger.style.color   = "white";
+    burger.style.display = sidebarOpen ? "none" : "block";
+}
+
+burger.onclick = function () {
+    sidebarOpen = !sidebarOpen;
+    sidebar.classList.toggle("active", sidebarOpen);
+    updateBurger();
+};
+
+map.on("click", function () {
+    if (window.innerWidth <= 768 && sidebarOpen) {
+        sidebar.classList.remove("active");
+        sidebarOpen = false;
+        updateBurger();
+    }
+});
+
+// ================= START =================
+connectSSE();
+
+</script>
+</body>
+</html>

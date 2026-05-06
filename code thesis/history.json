@@ -1,0 +1,2693 @@
+[
+    {
+        "time": 1778080500000,
+        "place": "156 km S 46° E of Tarragona (Davao Oriental)",
+        "magnitude": 2.7,
+        "latitude": 6.08,
+        "longitude": 127.47,
+        "depth_km": 28.0,
+        "id": "20e373ad-6"
+    },
+    {
+        "time": 1778079360000,
+        "place": "369 km S 24° E of Balut Island (Municipality Of Sarangani) (Davao Occidental)",
+        "magnitude": 4.2,
+        "latitude": 2.38,
+        "longitude": 126.79,
+        "depth_km": 58.0,
+        "id": "854bd5b3-2"
+    },
+    {
+        "time": 1778078700000,
+        "place": "006 km N 05° E of Dalupiri Island (Calayan) (Cagayan)",
+        "magnitude": 2.0,
+        "latitude": 19.16,
+        "longitude": 121.21,
+        "depth_km": 16.0,
+        "id": "cf6e2f48-e"
+    },
+    {
+        "time": 1778078400000,
+        "place": "029 km N 07° W of Hinoba-an (Negros Occidental)",
+        "magnitude": 2.0,
+        "latitude": 9.86,
+        "longitude": 122.44,
+        "depth_km": 26.0,
+        "id": "1934e663-6"
+    },
+    {
+        "time": 1778077620000,
+        "place": "005 km S 17° W of Mondragon (Northern Samar)",
+        "magnitude": 1.6,
+        "latitude": 12.47,
+        "longitude": 124.74,
+        "depth_km": 24.0,
+        "id": "5cdd0a70-a"
+    },
+    {
+        "time": 1778077500000,
+        "place": "007 km S 14° E of Hinoba-an (Negros Occidental)",
+        "magnitude": 3.6,
+        "latitude": 9.54,
+        "longitude": 122.48,
+        "depth_km": 53.0,
+        "id": "348b0dfc-6"
+    },
+    {
+        "time": 1778075820000,
+        "place": "008 km N 45° W of San Julian (Eastern Samar)",
+        "magnitude": 2.0,
+        "latitude": 11.81,
+        "longitude": 125.4,
+        "depth_km": 22.0,
+        "id": "01f6270d-0"
+    },
+    {
+        "time": 1778072760000,
+        "place": "005 km S 09° E of Boston (Davao Oriental)",
+        "magnitude": 1.8,
+        "latitude": 7.82,
+        "longitude": 126.38,
+        "depth_km": 6.0,
+        "id": "8a8c46d9-5"
+    },
+    {
+        "time": 1778072220000,
+        "place": "004 km N 48° W of Lucban (Quezon)",
+        "magnitude": 1.5,
+        "latitude": 14.14,
+        "longitude": 121.52,
+        "depth_km": 33.0,
+        "id": "ae3671ac-a"
+    },
+    {
+        "time": 1778070420000,
+        "place": "008 km S 63° E of Bunawan (Agusan Del Sur)",
+        "magnitude": 2.0,
+        "latitude": 8.15,
+        "longitude": 126.06,
+        "depth_km": 15.0,
+        "id": "c318f21f-a"
+    },
+    {
+        "time": 1778070180000,
+        "place": "177 km N 13° E of Pandan (Catanduanes)",
+        "magnitude": 3.1,
+        "latitude": 15.6,
+        "longitude": 124.55,
+        "depth_km": 56.0,
+        "id": "f258b745-1"
+    },
+    {
+        "time": 1778069940000,
+        "place": "008 km S 48° E of Dasol (Pangasinan)",
+        "magnitude": 2.1,
+        "latitude": 15.94,
+        "longitude": 119.94,
+        "depth_km": 16.0,
+        "id": "25ae197c-3"
+    },
+    {
+        "time": 1778067960000,
+        "place": "009 km S 59° E of Ayungon (Negros Oriental)",
+        "magnitude": 1.7,
+        "latitude": 9.82,
+        "longitude": 123.22,
+        "depth_km": 18.0,
+        "id": "fc55a450-6"
+    },
+    {
+        "time": 1778067780000,
+        "place": "006 km S 74° W of Hinunangan (Southern Leyte)",
+        "magnitude": 2.4,
+        "latitude": 10.38,
+        "longitude": 125.15,
+        "depth_km": 4.0,
+        "id": "42597f38-c"
+    },
+    {
+        "time": 1778064360000,
+        "place": "014 km N 83° E of Trento (Agusan Del Sur)",
+        "magnitude": 1.3,
+        "latitude": 8.05,
+        "longitude": 126.19,
+        "depth_km": 31.0,
+        "id": "a7b08965-a"
+    },
+    {
+        "time": 1778064360000,
+        "place": "004 km S 72° W of Dapa (Surigao Del Norte)",
+        "magnitude": 1.4,
+        "latitude": 9.75,
+        "longitude": 126.02,
+        "depth_km": 20.0,
+        "id": "9aa0576b-4"
+    },
+    {
+        "time": 1778059140000,
+        "place": "015 km N 65° W of Nasugbu (Batangas)",
+        "magnitude": 1.8,
+        "latitude": 14.13,
+        "longitude": 120.51,
+        "depth_km": 115.0,
+        "id": "36d69e41-1"
+    },
+    {
+        "time": 1778057040000,
+        "place": "011 km N 74° W of San Julian (Eastern Samar)",
+        "magnitude": 1.3,
+        "latitude": 11.78,
+        "longitude": 125.36,
+        "depth_km": 43.0,
+        "id": "1dfa7a5a-e"
+    },
+    {
+        "time": 1778055000000,
+        "place": "012 km N 32° W of Calatagan (Batangas)",
+        "magnitude": 1.6,
+        "latitude": 13.95,
+        "longitude": 120.54,
+        "depth_km": 112.0,
+        "id": "44459f01-f"
+    },
+    {
+        "time": 1778052840000,
+        "place": "007 km N 87° W of Calatagan (Batangas)",
+        "magnitude": 2.1,
+        "latitude": 13.84,
+        "longitude": 120.57,
+        "depth_km": 120.0,
+        "id": "ced7c06a-1"
+    },
+    {
+        "time": 1778050800000,
+        "place": "017 km S 16° E of Jagna (Bohol)",
+        "magnitude": 1.4,
+        "latitude": 9.51,
+        "longitude": 124.41,
+        "depth_km": 13.0,
+        "id": "524e6165-8"
+    },
+    {
+        "time": 1778049720000,
+        "place": "011 km N 08° W of Dalupiri Island (Calayan) (Cagayan)",
+        "magnitude": 3.9,
+        "latitude": 19.24,
+        "longitude": 121.2,
+        "depth_km": 9.0,
+        "id": "94a44abb-1"
+    },
+    {
+        "time": 1778039340000,
+        "place": "012 km N 81° E of City Of Bogo (Cebu)",
+        "magnitude": 2.1,
+        "latitude": 11.06,
+        "longitude": 124.09,
+        "depth_km": 33.0,
+        "id": "1dd877c4-c"
+    },
+    {
+        "time": 1778036220000,
+        "place": "014 km N 62° W of San Julian (Eastern Samar)",
+        "magnitude": 1.9,
+        "latitude": 11.81,
+        "longitude": 125.34,
+        "depth_km": 28.0,
+        "id": "c13b12cf-2"
+    },
+    {
+        "time": 1778026800000,
+        "place": "014 km N 19° E of Burdeos (Quezon)",
+        "magnitude": 1.8,
+        "latitude": 14.96,
+        "longitude": 122.01,
+        "depth_km": 10.0,
+        "id": "f90fb4f2-0"
+    },
+    {
+        "time": 1778022600000,
+        "place": "016 km S 86° E of Baganga (Davao Oriental)",
+        "magnitude": 4.0,
+        "latitude": 7.56,
+        "longitude": 126.71,
+        "depth_km": 22.0,
+        "id": "4b086858-3"
+    },
+    {
+        "time": 1778020380000,
+        "place": "011 km N 56° W of San Policarpo (Eastern Samar)",
+        "magnitude": 2.1,
+        "latitude": 12.23,
+        "longitude": 125.43,
+        "depth_km": 14.0,
+        "id": "9089da70-a"
+    },
+    {
+        "time": 1778016360000,
+        "place": "035 km S 87° E of Marihatag (Surigao Del Sur)",
+        "magnitude": 1.6,
+        "latitude": 8.78,
+        "longitude": 126.61,
+        "depth_km": 15.0,
+        "id": "4ca44dd3-9"
+    },
+    {
+        "time": 1778015640000,
+        "place": "011 km N 05° W of Dalupiri Island (Calayan) (Cagayan)",
+        "magnitude": 2.5,
+        "latitude": 19.2,
+        "longitude": 121.2,
+        "depth_km": 15.0,
+        "id": "a14bbfe1-c"
+    },
+    {
+        "time": 1778015100000,
+        "place": "004 km S 62° E of Dinalungan (Aurora)",
+        "magnitude": 1.5,
+        "latitude": 16.12,
+        "longitude": 121.99,
+        "depth_km": 20.0,
+        "id": "08862bec-3"
+    },
+    {
+        "time": 1778014620000,
+        "place": "014 km S 53° W of Bayabas (Surigao Del Sur)",
+        "magnitude": 1.9,
+        "latitude": 8.89,
+        "longitude": 126.18,
+        "depth_km": 23.0,
+        "id": "b480493d-2"
+    },
+    {
+        "time": 1778012880000,
+        "place": "006 km N 76° E of Vintar (Ilocos Norte)",
+        "magnitude": 1.4,
+        "latitude": 18.24,
+        "longitude": 120.71,
+        "depth_km": 38.0,
+        "id": "8daf1719-e"
+    },
+    {
+        "time": 1778012820000,
+        "place": "428 km S 43° E of Balut Island (Municipality Of Sarangani) (Davao Occidental)",
+        "magnitude": 4.1,
+        "latitude": 2.58,
+        "longitude": 128.04,
+        "depth_km": 232.0,
+        "id": "77d37855-1"
+    },
+    {
+        "time": 1778012160000,
+        "place": "111 km N 78° W of Currimao (Ilocos Norte)",
+        "magnitude": 1.9,
+        "latitude": 18.24,
+        "longitude": 119.46,
+        "depth_km": 10.0,
+        "id": "bdadef7d-f"
+    },
+    {
+        "time": 1778011920000,
+        "place": "002 km N 27° W of Monkayo (Davao De Oro)",
+        "magnitude": 1.4,
+        "latitude": 7.84,
+        "longitude": 126.04,
+        "depth_km": 5.0,
+        "id": "813f3db8-1"
+    },
+    {
+        "time": 1778011500000,
+        "place": "021 km N 08° W of Paluan (Occidental Mindoro)",
+        "magnitude": 1.4,
+        "latitude": 13.6,
+        "longitude": 120.44,
+        "depth_km": 2.0,
+        "id": "67e328b0-f"
+    },
+    {
+        "time": 1778011080000,
+        "place": "010 km N 57° W of Looc (Occidental Mindoro)",
+        "magnitude": 1.8,
+        "latitude": 13.77,
+        "longitude": 120.17,
+        "depth_km": 21.0,
+        "id": "52ec90f8-f"
+    },
+    {
+        "time": 1778010960000,
+        "place": "020 km N 35° E of Burdeos (Quezon)",
+        "magnitude": 1.9,
+        "latitude": 14.99,
+        "longitude": 122.07,
+        "depth_km": 8.0,
+        "id": "34379bd4-f"
+    },
+    {
+        "time": 1778010900000,
+        "place": "017 km S 39° E of Looc (Occidental Mindoro)",
+        "magnitude": 1.8,
+        "latitude": 13.6,
+        "longitude": 120.35,
+        "depth_km": 33.0,
+        "id": "6e85f2cf-a"
+    },
+    {
+        "time": 1778010900000,
+        "place": "018 km S 32° W of Kalamansig (Sultan Kudarat)",
+        "magnitude": 1.6,
+        "latitude": 6.41,
+        "longitude": 123.96,
+        "depth_km": 33.0,
+        "id": "c7976b74-8"
+    },
+    {
+        "time": 1778010240000,
+        "place": "008 km N 78° W of Claveria (Masbate)",
+        "magnitude": 2.1,
+        "latitude": 12.92,
+        "longitude": 123.17,
+        "depth_km": 20.0,
+        "id": "3bf7b039-7"
+    },
+    {
+        "time": 1778009940000,
+        "place": "021 km S 30° W of San Pascual (Masbate)",
+        "magnitude": 1.7,
+        "latitude": 12.96,
+        "longitude": 122.88,
+        "depth_km": 1.0,
+        "id": "abcedfab-0"
+    },
+    {
+        "time": 1778009040000,
+        "place": "094 km S 50° E of Governor Generoso (Davao Oriental)",
+        "magnitude": 3.2,
+        "latitude": 6.11,
+        "longitude": 126.72,
+        "depth_km": 57.0,
+        "id": "a2255374-d"
+    },
+    {
+        "time": 1778008860000,
+        "place": "020 km N 83° E of Prieto Diaz (Sorsogon)",
+        "magnitude": 1.6,
+        "latitude": 13.06,
+        "longitude": 124.38,
+        "depth_km": 59.0,
+        "id": "0602e0d7-a"
+    },
+    {
+        "time": 1778008440000,
+        "place": "012 km N 48° W of Ayungon (Negros Oriental)",
+        "magnitude": 1.7,
+        "latitude": 9.93,
+        "longitude": 123.06,
+        "depth_km": 4.0,
+        "id": "1dc9f991-8"
+    },
+    {
+        "time": 1778008080000,
+        "place": "008 km S 28° E of City Of Bogo (Cebu)",
+        "magnitude": 2.0,
+        "latitude": 10.98,
+        "longitude": 124.01,
+        "depth_km": 17.0,
+        "id": "f6fe0c6a-7"
+    },
+    {
+        "time": 1778006880000,
+        "place": "009 km N 38° E of Claveria (Masbate)",
+        "magnitude": 1.8,
+        "latitude": 12.97,
+        "longitude": 123.3,
+        "depth_km": 2.0,
+        "id": "2f17d53a-2"
+    },
+    {
+        "time": 1778005920000,
+        "place": "012 km S 77° E of Columbio (Sultan Kudarat)",
+        "magnitude": 1.5,
+        "latitude": 6.66,
+        "longitude": 125.07,
+        "depth_km": 17.0,
+        "id": "d2df6559-4"
+    },
+    {
+        "time": 1778005020000,
+        "place": "039 km S 20° W of San Pascual (Masbate)",
+        "magnitude": 2.3,
+        "latitude": 12.79,
+        "longitude": 122.85,
+        "depth_km": 27.0,
+        "id": "1a08bf65-4"
+    },
+    {
+        "time": 1778002080000,
+        "place": "099 km S 40° E of Governor Generoso (Davao Oriental)",
+        "magnitude": 2.6,
+        "latitude": 5.97,
+        "longitude": 126.65,
+        "depth_km": 16.0,
+        "id": "fea56bee-8"
+    },
+    {
+        "time": 1778001300000,
+        "place": "051 km N 67° E of Santa Ana (Cagayan)",
+        "magnitude": 2.1,
+        "latitude": 18.64,
+        "longitude": 122.58,
+        "depth_km": 14.0,
+        "id": "bff3a80a-e"
+    },
+    {
+        "time": 1777998540000,
+        "place": "019 km S 31° W of Calatagan (Batangas)",
+        "magnitude": 2.5,
+        "latitude": 13.68,
+        "longitude": 120.54,
+        "depth_km": 127.0,
+        "id": "6232e64b-4"
+    },
+    {
+        "time": 1777998480000,
+        "place": "232 km S 01° E of Balut Island (Municipality Of Sarangani) (Davao Occidental)",
+        "magnitude": 3.8,
+        "latitude": 3.32,
+        "longitude": 125.45,
+        "depth_km": 34.0,
+        "id": "7ba444ef-3"
+    },
+    {
+        "time": 1777996680000,
+        "place": "005 km N 31° E of Tarragona (Davao Oriental)",
+        "magnitude": 2.2,
+        "latitude": 7.09,
+        "longitude": 126.47,
+        "depth_km": 49.0,
+        "id": "a56a12d6-f"
+    },
+    {
+        "time": 1777995180000,
+        "place": "002 km N 57° W of Quinapondan (Eastern Samar)",
+        "magnitude": 2.0,
+        "latitude": 11.13,
+        "longitude": 125.54,
+        "depth_km": 13.0,
+        "id": "622753cf-f"
+    },
+    {
+        "time": 1777995120000,
+        "place": "014 km S 38° E of Dapa (Surigao Del Norte)",
+        "magnitude": 1.5,
+        "latitude": 9.66,
+        "longitude": 126.13,
+        "depth_km": 30.0,
+        "id": "201b1f63-8"
+    },
+    {
+        "time": 1777994400000,
+        "place": "004 km S 37° W of Lian (Batangas)",
+        "magnitude": 1.4,
+        "latitude": 14.01,
+        "longitude": 120.63,
+        "depth_km": 24.0,
+        "id": "3f725137-3"
+    },
+    {
+        "time": 1777993620000,
+        "place": "011 km N 59° W of San Julian (Eastern Samar)",
+        "magnitude": 1.9,
+        "latitude": 11.81,
+        "longitude": 125.37,
+        "depth_km": 30.0,
+        "id": "fbd2ea89-7"
+    },
+    {
+        "time": 1777993200000,
+        "place": "005 km S 66° E of Pilar (Surigao Del Norte)",
+        "magnitude": 1.4,
+        "latitude": 9.84,
+        "longitude": 126.15,
+        "depth_km": 6.0,
+        "id": "a46efc1f-4"
+    },
+    {
+        "time": 1777992900000,
+        "place": "011 km N 20° E of Uson (Masbate)",
+        "magnitude": 1.9,
+        "latitude": 12.32,
+        "longitude": 123.82,
+        "depth_km": 22.0,
+        "id": "14149bc1-e"
+    },
+    {
+        "time": 1777991640000,
+        "place": "024 km S 68° E of Caraga (Davao Oriental)",
+        "magnitude": 2.4,
+        "latitude": 7.25,
+        "longitude": 126.77,
+        "depth_km": 35.0,
+        "id": "c506a171-3"
+    },
+    {
+        "time": 1777991280000,
+        "place": "015 km S 66° E of Divilacan (Isabela)",
+        "magnitude": 1.6,
+        "latitude": 17.27,
+        "longitude": 122.42,
+        "depth_km": 10.0,
+        "id": "8158b4dc-0"
+    },
+    {
+        "time": 1777988700000,
+        "place": "018 km N 59° W of San Julian (Eastern Samar)",
+        "magnitude": 2.1,
+        "latitude": 11.84,
+        "longitude": 125.31,
+        "depth_km": 22.0,
+        "id": "72906a57-f"
+    },
+    {
+        "time": 1777987920000,
+        "place": "012 km S 27° E of Manay (Davao Oriental)",
+        "magnitude": 2.0,
+        "latitude": 7.11,
+        "longitude": 126.59,
+        "depth_km": 122.0,
+        "id": "0c355c8f-1"
+    },
+    {
+        "time": 1777985160000,
+        "place": "021 km S 61° E of Socorro (Surigao Del Norte)",
+        "magnitude": 1.6,
+        "latitude": 9.53,
+        "longitude": 126.13,
+        "depth_km": 41.0,
+        "id": "65d18e37-8"
+    },
+    {
+        "time": 1777984500000,
+        "place": "010 km S 69° W of Calatagan (Batangas)",
+        "magnitude": 1.5,
+        "latitude": 13.8,
+        "longitude": 120.55,
+        "depth_km": 77.0,
+        "id": "5cd742ee-0"
+    },
+    {
+        "time": 1777984320000,
+        "place": "066 km N 24° W of Liloy (Zamboanga Del Norte)",
+        "magnitude": 1.5,
+        "latitude": 8.67,
+        "longitude": 122.43,
+        "depth_km": 28.0,
+        "id": "a1d11925-4"
+    },
+    {
+        "time": 1777982700000,
+        "place": "014 km N 10° W of City Of Bago (Negros Occidental)",
+        "magnitude": 2.1,
+        "latitude": 10.66,
+        "longitude": 122.81,
+        "depth_km": 23.0,
+        "id": "06da4860-3"
+    },
+    {
+        "time": 1777982280000,
+        "place": "014 km N 68° W of San Julian (Eastern Samar)",
+        "magnitude": 1.9,
+        "latitude": 11.8,
+        "longitude": 125.34,
+        "depth_km": 26.0,
+        "id": "84d65d1e-0"
+    },
+    {
+        "time": 1777980960000,
+        "place": "001 km N 18° W of Anda (Pangasinan)",
+        "magnitude": 1.8,
+        "latitude": 16.3,
+        "longitude": 119.95,
+        "depth_km": 18.0,
+        "id": "f3dc8545-2"
+    },
+    {
+        "time": 1777977840000,
+        "place": "082 km S 70° E of Don Marcelino (Davao Occidental)",
+        "magnitude": 2.3,
+        "latitude": 5.95,
+        "longitude": 126.39,
+        "depth_km": 20.0,
+        "id": "a3e81492-a"
+    },
+    {
+        "time": 1777975980000,
+        "place": "023 km N 87° W of Nasugbu (Batangas)",
+        "magnitude": 1.9,
+        "latitude": 14.09,
+        "longitude": 120.42,
+        "depth_km": 73.0,
+        "id": "6104c7a2-e"
+    },
+    {
+        "time": 1777973940000,
+        "place": "042 km S 35° W of Sabtang (Batanes)",
+        "magnitude": 2.4,
+        "latitude": 20.02,
+        "longitude": 121.64,
+        "depth_km": 13.0,
+        "id": "29059c47-9"
+    },
+    {
+        "time": 1777973580000,
+        "place": "012 km N 26° W of Cortes (Surigao Del Sur)",
+        "magnitude": 1.4,
+        "latitude": 9.37,
+        "longitude": 126.14,
+        "depth_km": 26.0,
+        "id": "7bf27cdb-b"
+    },
+    {
+        "time": 1777972440000,
+        "place": "375 km S 19° E of Balut Island (Municipality Of Sarangani) (Davao Occidental)",
+        "magnitude": 3.7,
+        "latitude": 2.2,
+        "longitude": 126.51,
+        "depth_km": 233.0,
+        "id": "bcd9b64e-5"
+    },
+    {
+        "time": 1777967400000,
+        "place": "007 km N 38° W of Lingig (Surigao Del Sur)",
+        "magnitude": 2.0,
+        "latitude": 8.09,
+        "longitude": 126.37,
+        "depth_km": 119.0,
+        "id": "5526eecf-f"
+    },
+    {
+        "time": 1777966260000,
+        "place": "046 km N 27° E of Burdeos (Quezon)",
+        "magnitude": 2.4,
+        "latitude": 15.21,
+        "longitude": 122.16,
+        "depth_km": 11.0,
+        "id": "2ff89b9f-7"
+    },
+    {
+        "time": 1777965120000,
+        "place": "029 km N 85° E of Hinatuan (Surigao Del Sur)",
+        "magnitude": 1.7,
+        "latitude": 8.39,
+        "longitude": 126.6,
+        "depth_km": 27.0,
+        "id": "4087bc96-7"
+    },
+    {
+        "time": 1777965060000,
+        "place": "029 km N 24° E of Cortes (Surigao Del Sur)",
+        "magnitude": 1.4,
+        "latitude": 9.52,
+        "longitude": 126.3,
+        "depth_km": 19.0,
+        "id": "71a3296d-9"
+    },
+    {
+        "time": 1777962120000,
+        "place": "002 km S 57° E of Santa Rita (Samar)",
+        "magnitude": 1.3,
+        "latitude": 11.43,
+        "longitude": 124.96,
+        "depth_km": 7.0,
+        "id": "2ea9598e-5"
+    },
+    {
+        "time": 1777950240000,
+        "place": "002 km N 29° W of Badiangan (Iloilo)",
+        "magnitude": 1.3,
+        "latitude": 11.0,
+        "longitude": 122.53,
+        "depth_km": 27.0,
+        "id": "8b1a7494-9"
+    },
+    {
+        "time": 1777948020000,
+        "place": "033 km S 42° W of Mamburao (Occidental Mindoro)",
+        "magnitude": 2.0,
+        "latitude": 13.0,
+        "longitude": 120.39,
+        "depth_km": 5.0,
+        "id": "ce8f060c-0"
+    },
+    {
+        "time": 1777947000000,
+        "place": "015 km S 52° W of Maasim (Sarangani)",
+        "magnitude": 2.6,
+        "latitude": 5.78,
+        "longitude": 124.89,
+        "depth_km": 8.0,
+        "id": "3800f505-c"
+    },
+    {
+        "time": 1777945380000,
+        "place": "036 km S 43° W of Maasim (Sarangani)",
+        "magnitude": 2.5,
+        "latitude": 5.63,
+        "longitude": 124.77,
+        "depth_km": 23.0,
+        "id": "3608735a-e"
+    },
+    {
+        "time": 1777942980000,
+        "place": "033 km N 40° E of San Julian (Eastern Samar)",
+        "magnitude": 1.8,
+        "latitude": 11.98,
+        "longitude": 125.65,
+        "depth_km": 21.0,
+        "id": "4c088a41-7"
+    },
+    {
+        "time": 1777942260000,
+        "place": "052 km S 50° W of Kalamansig (Sultan Kudarat)",
+        "magnitude": 1.8,
+        "latitude": 6.25,
+        "longitude": 123.69,
+        "depth_km": 31.0,
+        "id": "553095e2-6"
+    },
+    {
+        "time": 1777941540000,
+        "place": "005 km S 32° E of Caraga (Davao Oriental)",
+        "magnitude": 2.7,
+        "latitude": 7.29,
+        "longitude": 126.59,
+        "depth_km": 21.0,
+        "id": "bc0390e8-3"
+    },
+    {
+        "time": 1777939140000,
+        "place": "187 km S 88° W of Itbayat (Batanes)",
+        "magnitude": 3.5,
+        "latitude": 20.75,
+        "longitude": 120.05,
+        "depth_km": 32.0,
+        "id": "bc4af631-a"
+    },
+    {
+        "time": 1777938780000,
+        "place": "009 km N 52° W of San Julian (Eastern Samar)",
+        "magnitude": 3.0,
+        "latitude": 11.8,
+        "longitude": 125.39,
+        "depth_km": 26.0,
+        "id": "06f72ae7-d"
+    },
+    {
+        "time": 1777935240000,
+        "place": "014 km N 80° W of Lambunao (Iloilo)",
+        "magnitude": 2.8,
+        "latitude": 11.08,
+        "longitude": 122.35,
+        "depth_km": 5.0,
+        "id": "c6a5ca1a-3"
+    },
+    {
+        "time": 1777932360000,
+        "place": "011 km N 75° W of Javier (Leyte)",
+        "magnitude": 1.5,
+        "latitude": 10.82,
+        "longitude": 124.84,
+        "depth_km": 30.0,
+        "id": "03bc6c5f-6"
+    },
+    {
+        "time": 1777932300000,
+        "place": "024 km N 61° W of Caramoran (Catanduanes)",
+        "magnitude": 3.7,
+        "latitude": 14.09,
+        "longitude": 123.94,
+        "depth_km": 5.0,
+        "id": "0ef8ec51-9"
+    },
+    {
+        "time": 1777931940000,
+        "place": "005 km N 59° E of Tibiao (Antique)",
+        "magnitude": 2.0,
+        "latitude": 11.31,
+        "longitude": 122.07,
+        "depth_km": 2.0,
+        "id": "3bafa61c-0"
+    },
+    {
+        "time": 1777931400000,
+        "place": "052 km N 83° W of Santa Catalina (Ilocos Sur)",
+        "magnitude": 2.1,
+        "latitude": 17.65,
+        "longitude": 119.87,
+        "depth_km": 15.0,
+        "id": "bc9f2a88-9"
+    },
+    {
+        "time": 1777926360000,
+        "place": "004 km N 10° E of Jaro (Leyte)",
+        "magnitude": 1.4,
+        "latitude": 11.22,
+        "longitude": 124.79,
+        "depth_km": 28.0,
+        "id": "09198edc-f"
+    },
+    {
+        "time": 1777926360000,
+        "place": "029 km S 41° E of Claveria (Masbate)",
+        "magnitude": 1.7,
+        "latitude": 12.7,
+        "longitude": 123.42,
+        "depth_km": 12.0,
+        "id": "1b1e6a79-2"
+    },
+    {
+        "time": 1777926120000,
+        "place": "014 km N 15° E of Senator Ninoy Aquino (Sultan Kudarat)",
+        "magnitude": 2.3,
+        "latitude": 6.58,
+        "longitude": 124.36,
+        "depth_km": 9.0,
+        "id": "55274913-f"
+    },
+    {
+        "time": 1777926000000,
+        "place": "036 km S 65° E of Marihatag (Surigao Del Sur)",
+        "magnitude": 2.3,
+        "latitude": 8.66,
+        "longitude": 126.59,
+        "depth_km": 32.0,
+        "id": "47441fba-e"
+    },
+    {
+        "time": 1777925400000,
+        "place": "046 km S 56° W of Kalamansig (Sultan Kudarat)",
+        "magnitude": 3.4,
+        "latitude": 6.32,
+        "longitude": 123.7,
+        "depth_km": 16.0,
+        "id": "58a45a80-c"
+    },
+    {
+        "time": 1777924680000,
+        "place": "012 km N 70° W of San Julian (Eastern Samar)",
+        "magnitude": 1.3,
+        "latitude": 11.79,
+        "longitude": 125.35,
+        "depth_km": 38.0,
+        "id": "19b65f8d-a"
+    },
+    {
+        "time": 1777924080000,
+        "place": "005 km S 72° E of Agno (Pangasinan)",
+        "magnitude": 2.3,
+        "latitude": 16.1,
+        "longitude": 119.84,
+        "depth_km": 17.0,
+        "id": "075b4ba2-e"
+    },
+    {
+        "time": 1777923300000,
+        "place": "017 km N 01° W of Burgos (Ilocos Norte)",
+        "magnitude": 2.0,
+        "latitude": 18.66,
+        "longitude": 120.64,
+        "depth_km": 19.0,
+        "id": "599cd3bf-6"
+    },
+    {
+        "time": 1777922580000,
+        "place": "021 km S 25° W of Burdeos (Quezon)",
+        "magnitude": 1.4,
+        "latitude": 14.67,
+        "longitude": 121.88,
+        "depth_km": 24.0,
+        "id": "b42645ef-b"
+    },
+    {
+        "time": 1777921740000,
+        "place": "003 km N 67° W of Agno (Pangasinan)",
+        "magnitude": 2.9,
+        "latitude": 16.13,
+        "longitude": 119.77,
+        "depth_km": 27.0,
+        "id": "2e967f79-c"
+    },
+    {
+        "time": 1777920720000,
+        "place": "009 km S 52° W of Polillo (Quezon)",
+        "magnitude": 1.4,
+        "latitude": 14.66,
+        "longitude": 121.87,
+        "depth_km": 30.0,
+        "id": "bb0d6be6-0"
+    },
+    {
+        "time": 1777920300000,
+        "place": "019 km N 15° W of Rapu-rapu (Albay)",
+        "magnitude": 1.8,
+        "latitude": 13.35,
+        "longitude": 124.08,
+        "depth_km": 22.0,
+        "id": "2d51c28c-e"
+    },
+    {
+        "time": 1777919820000,
+        "place": "014 km N 58° E of City Of Cabadbaran (Agusan Del Norte)",
+        "magnitude": 1.8,
+        "latitude": 9.19,
+        "longitude": 125.66,
+        "depth_km": 15.0,
+        "id": "c5d283a3-c"
+    },
+    {
+        "time": 1777916700000,
+        "place": "010 km N 78° W of San Julian (Eastern Samar)",
+        "magnitude": 1.8,
+        "latitude": 11.77,
+        "longitude": 125.36,
+        "depth_km": 36.0,
+        "id": "ae2afc1e-b"
+    },
+    {
+        "time": 1777915680000,
+        "place": "008 km N 50° W of San Julian (Eastern Samar)",
+        "magnitude": 2.7,
+        "latitude": 11.8,
+        "longitude": 125.4,
+        "depth_km": 27.0,
+        "id": "dcc6b643-4"
+    },
+    {
+        "time": 1777912860000,
+        "place": "014 km S 44° E of Panglao (Bohol)",
+        "magnitude": 2.2,
+        "latitude": 9.49,
+        "longitude": 123.84,
+        "depth_km": 7.0,
+        "id": "423d21b1-1"
+    },
+    {
+        "time": 1777912080000,
+        "place": "029 km N 01° W of Camiguin Island (Calayan) (Cagayan)",
+        "magnitude": 1.8,
+        "latitude": 19.17,
+        "longitude": 121.86,
+        "depth_km": 4.0,
+        "id": "c1628f28-6"
+    },
+    {
+        "time": 1777911240000,
+        "place": "007 km N 37° W of San Julian (Eastern Samar)",
+        "magnitude": 2.3,
+        "latitude": 11.81,
+        "longitude": 125.43,
+        "depth_km": 28.0,
+        "id": "044a4487-b"
+    },
+    {
+        "time": 1777910760000,
+        "place": "048 km S 65° E of Don Marcelino (Davao Occidental)",
+        "magnitude": 2.2,
+        "latitude": 6.01,
+        "longitude": 126.09,
+        "depth_km": 79.0,
+        "id": "b20fdc71-9"
+    },
+    {
+        "time": 1777908960000,
+        "place": "044 km N 67° W of Babuyan Island (Calayan) (Cagayan)",
+        "magnitude": 2.0,
+        "latitude": 19.67,
+        "longitude": 121.52,
+        "depth_km": 30.0,
+        "id": "feb390ce-9"
+    },
+    {
+        "time": 1777907040000,
+        "place": "020 km N 84° E of Hinatuan (Surigao Del Sur)",
+        "magnitude": 1.8,
+        "latitude": 8.39,
+        "longitude": 126.52,
+        "depth_km": 26.0,
+        "id": "b1602894-6"
+    },
+    {
+        "time": 1777906380000,
+        "place": "020 km South of Calatagan (Batangas)",
+        "magnitude": 1.4,
+        "latitude": 13.65,
+        "longitude": 120.63,
+        "depth_km": 105.0,
+        "id": "6ca1c913-3"
+    },
+    {
+        "time": 1777906020000,
+        "place": "013 km N 64° W of San Julian (Eastern Samar)",
+        "magnitude": 1.5,
+        "latitude": 11.8,
+        "longitude": 125.35,
+        "depth_km": 26.0,
+        "id": "06eba206-1"
+    },
+    {
+        "time": 1777905900000,
+        "place": "012 km N 68° W of San Julian (Eastern Samar)",
+        "magnitude": 1.7,
+        "latitude": 11.79,
+        "longitude": 125.35,
+        "depth_km": 28.0,
+        "id": "b286b32f-e"
+    },
+    {
+        "time": 1777903440000,
+        "place": "124 km S 28° W of Palimbang (Sultan Kudarat)",
+        "magnitude": 4.3,
+        "latitude": 5.22,
+        "longitude": 123.67,
+        "depth_km": 548.0,
+        "id": "49e20fa2-c"
+    },
+    {
+        "time": 1777902720000,
+        "place": "015 km N 69° E of Carasi (Ilocos Norte)",
+        "magnitude": 1.6,
+        "latitude": 18.19,
+        "longitude": 120.95,
+        "depth_km": 71.0,
+        "id": "b8782e6b-7"
+    },
+    {
+        "time": 1777901940000,
+        "place": "013 km N 52° W of San Julian (Eastern Samar)",
+        "magnitude": 2.2,
+        "latitude": 11.82,
+        "longitude": 125.36,
+        "depth_km": 24.0,
+        "id": "375e94c8-c"
+    },
+    {
+        "time": 1777901400000,
+        "place": "093 km S 40° E of Governor Generoso (Davao Oriental)",
+        "magnitude": 2.8,
+        "latitude": 6.0,
+        "longitude": 126.61,
+        "depth_km": 4.0,
+        "id": "8519a0d2-1"
+    },
+    {
+        "time": 1777900380000,
+        "place": "031 km N 07° W of Agutaya (Palawan)",
+        "magnitude": 2.1,
+        "latitude": 11.43,
+        "longitude": 120.9,
+        "depth_km": 27.0,
+        "id": "387325ff-a"
+    },
+    {
+        "time": 1777899540000,
+        "place": "007 km N 56° W of Katipunan (Zamboanga Del Norte)",
+        "magnitude": 3.0,
+        "latitude": 8.55,
+        "longitude": 123.23,
+        "depth_km": 17.0,
+        "id": "c393a42d-7"
+    },
+    {
+        "time": 1777898820000,
+        "place": "063 km N 88° E of Guiuan (Eastern Samar)",
+        "magnitude": 2.6,
+        "latitude": 11.06,
+        "longitude": 126.3,
+        "depth_km": 19.0,
+        "id": "ad570d77-9"
+    },
+    {
+        "time": 1777897320000,
+        "place": "007 km N 48° E of Santa Monica (Surigao Del Norte)",
+        "magnitude": 1.8,
+        "latitude": 10.06,
+        "longitude": 126.09,
+        "depth_km": 20.0,
+        "id": "5240f2de-9"
+    },
+    {
+        "time": 1777896780000,
+        "place": "015 km N 67° W of San Julian (Eastern Samar)",
+        "magnitude": 2.0,
+        "latitude": 11.81,
+        "longitude": 125.33,
+        "depth_km": 27.0,
+        "id": "87770aa8-6"
+    },
+    {
+        "time": 1777895040000,
+        "place": "013 km S 79° W of San Julian (Eastern Samar)",
+        "magnitude": 1.9,
+        "latitude": 11.73,
+        "longitude": 125.34,
+        "depth_km": 33.0,
+        "id": "3df9a5b6-9"
+    },
+    {
+        "time": 1777894080000,
+        "place": "009 km N 11° W of San Julian (Eastern Samar)",
+        "magnitude": 1.9,
+        "latitude": 11.84,
+        "longitude": 125.44,
+        "depth_km": 19.0,
+        "id": "d54582c5-f"
+    },
+    {
+        "time": 1777891560000,
+        "place": "017 km S 81° E of Trento (Agusan Del Sur)",
+        "magnitude": 1.4,
+        "latitude": 8.01,
+        "longitude": 126.22,
+        "depth_km": 30.0,
+        "id": "758662bb-5"
+    },
+    {
+        "time": 1777886280000,
+        "place": "004 km S 55° E of San Juan (La Union)",
+        "magnitude": 1.8,
+        "latitude": 16.65,
+        "longitude": 120.37,
+        "depth_km": 14.0,
+        "id": "5028c039-d"
+    },
+    {
+        "time": 1777881480000,
+        "place": "014 km S 73° E of Maragusan (Davao De Oro)",
+        "magnitude": 1.9,
+        "latitude": 7.28,
+        "longitude": 126.24,
+        "depth_km": 16.0,
+        "id": "eb19aa88-b"
+    },
+    {
+        "time": 1777880100000,
+        "place": "007 km N 47° W of City Of Bogo (Cebu)",
+        "magnitude": 1.7,
+        "latitude": 11.09,
+        "longitude": 123.93,
+        "depth_km": 2.0,
+        "id": "575187f9-4"
+    },
+    {
+        "time": 1777878540000,
+        "place": "035 km N 38° E of Lubang (Occidental Mindoro)",
+        "magnitude": 1.3,
+        "latitude": 14.11,
+        "longitude": 120.32,
+        "depth_km": 46.0,
+        "id": "9498487f-a"
+    },
+    {
+        "time": 1777877340000,
+        "place": "014 km N 81° W of San Julian (Eastern Samar)",
+        "magnitude": 1.6,
+        "latitude": 11.77,
+        "longitude": 125.33,
+        "depth_km": 29.0,
+        "id": "9a66878c-b"
+    },
+    {
+        "time": 1777877280000,
+        "place": "007 km S 78° W of Sulat (Eastern Samar)",
+        "magnitude": 2.0,
+        "latitude": 11.8,
+        "longitude": 125.39,
+        "depth_km": 24.0,
+        "id": "d3ec2ba3-b"
+    },
+    {
+        "time": 1777876980000,
+        "place": "012 km S 87° W of San Julian (Eastern Samar)",
+        "magnitude": 1.6,
+        "latitude": 11.75,
+        "longitude": 125.35,
+        "depth_km": 32.0,
+        "id": "8140d5b0-2"
+    },
+    {
+        "time": 1777876440000,
+        "place": "008 km N 50° W of San Julian (Eastern Samar)",
+        "magnitude": 2.1,
+        "latitude": 11.8,
+        "longitude": 125.4,
+        "depth_km": 25.0,
+        "id": "4a6b03e8-f"
+    },
+    {
+        "time": 1777875480000,
+        "place": "012 km N 51° W of San Julian (Eastern Samar)",
+        "magnitude": 1.8,
+        "latitude": 11.82,
+        "longitude": 125.37,
+        "depth_km": 24.0,
+        "id": "493892bd-4"
+    },
+    {
+        "time": 1777875420000,
+        "place": "013 km N 75° W of San Julian (Eastern Samar)",
+        "magnitude": 1.8,
+        "latitude": 11.78,
+        "longitude": 125.34,
+        "depth_km": 31.0,
+        "id": "cd378938-7"
+    },
+    {
+        "time": 1777875180000,
+        "place": "014 km N 68° W of San Julian (Eastern Samar)",
+        "magnitude": 3.2,
+        "latitude": 11.8,
+        "longitude": 125.34,
+        "depth_km": 27.0,
+        "id": "f9c7d8fd-1"
+    },
+    {
+        "time": 1777874940000,
+        "place": "018 km N 67° E of San Julian (Eastern Samar)",
+        "magnitude": 6.0,
+        "latitude": 11.82,
+        "longitude": 125.61,
+        "depth_km": 57.0,
+        "id": "58bf9933-e"
+    },
+    {
+        "time": 1777873980000,
+        "place": "021 km S 56° E of Manay (Davao Oriental)",
+        "magnitude": 3.3,
+        "latitude": 7.1,
+        "longitude": 126.7,
+        "depth_km": 64.0,
+        "id": "41db1c60-5"
+    },
+    {
+        "time": 1777866600000,
+        "place": "007 km S 30° W of Kitcharao (Agusan Del Norte)",
+        "magnitude": 3.4,
+        "latitude": 9.4,
+        "longitude": 125.55,
+        "depth_km": 7.0,
+        "id": "c7b7aae1-8"
+    },
+    {
+        "time": 1777866360000,
+        "place": "016 km N 37° E of Senator Ninoy Aquino (Sultan Kudarat)",
+        "magnitude": 1.7,
+        "latitude": 6.57,
+        "longitude": 124.41,
+        "depth_km": 9.0,
+        "id": "7e1fb54f-0"
+    },
+    {
+        "time": 1777865820000,
+        "place": "282 km S 20° E of Balut Island (Municipality Of Sarangani) (Davao Occidental)",
+        "magnitude": 4.4,
+        "latitude": 3.02,
+        "longitude": 126.29,
+        "depth_km": 34.0,
+        "id": "b7eb1da1-9"
+    },
+    {
+        "time": 1777865460000,
+        "place": "019 km S 31° E of Looc (Occidental Mindoro)",
+        "magnitude": 2.2,
+        "latitude": 13.58,
+        "longitude": 120.34,
+        "depth_km": 4.0,
+        "id": "e7a8728e-7"
+    },
+    {
+        "time": 1777860300000,
+        "place": "020 km S 25° E of General Luna (Surigao Del Norte)",
+        "magnitude": 1.4,
+        "latitude": 9.62,
+        "longitude": 126.24,
+        "depth_km": 34.0,
+        "id": "2f4b75a4-5"
+    },
+    {
+        "time": 1777857480000,
+        "place": "035 km N 57° E of Bayabas (Surigao Del Sur)",
+        "magnitude": 2.2,
+        "latitude": 9.14,
+        "longitude": 126.55,
+        "depth_km": 38.0,
+        "id": "c8a0e7e1-e"
+    },
+    {
+        "time": 1777856460000,
+        "place": "017 km S 48° W of Dalupiri Island (Calayan) (Cagayan)",
+        "magnitude": 1.9,
+        "latitude": 19.0,
+        "longitude": 121.08,
+        "depth_km": 21.0,
+        "id": "da3b3b98-5"
+    },
+    {
+        "time": 1777855920000,
+        "place": "073 km N 88° E of Jose Abad Santos (Davao Occidental)",
+        "magnitude": 2.4,
+        "latitude": 5.94,
+        "longitude": 126.31,
+        "depth_km": 127.0,
+        "id": "8eb1eb3d-6"
+    },
+    {
+        "time": 1777855740000,
+        "place": "023 km N 74° E of Cagwait (Surigao Del Sur)",
+        "magnitude": 1.9,
+        "latitude": 8.97,
+        "longitude": 126.5,
+        "depth_km": 20.0,
+        "id": "60b81394-8"
+    },
+    {
+        "time": 1777853940000,
+        "place": "068 km N 65° E of Cortes (Surigao Del Sur)",
+        "magnitude": 2.5,
+        "latitude": 9.54,
+        "longitude": 126.75,
+        "depth_km": 11.0,
+        "id": "6e70b262-b"
+    },
+    {
+        "time": 1777852320000,
+        "place": "011 km N 78° E of Banaybanay (Davao Oriental)",
+        "magnitude": 2.4,
+        "latitude": 6.99,
+        "longitude": 126.11,
+        "depth_km": 33.0,
+        "id": "bfd3daf4-e"
+    },
+    {
+        "time": 1777847400000,
+        "place": "010 km S 25° W of Dalupiri Island (Calayan) (Cagayan)",
+        "magnitude": 1.7,
+        "latitude": 19.02,
+        "longitude": 121.17,
+        "depth_km": 23.0,
+        "id": "5733bd1f-9"
+    },
+    {
+        "time": 1777844220000,
+        "place": "008 km N 34° E of Cortes (Surigao Del Sur)",
+        "magnitude": 2.2,
+        "latitude": 9.33,
+        "longitude": 126.23,
+        "depth_km": 28.0,
+        "id": "31c613cb-1"
+    },
+    {
+        "time": 1777842240000,
+        "place": "092 km N 79° W of Lubang (Occidental Mindoro)",
+        "magnitude": 2.9,
+        "latitude": 14.02,
+        "longitude": 119.28,
+        "depth_km": 32.0,
+        "id": "48a91606-b"
+    },
+    {
+        "time": 1777841700000,
+        "place": "219 km S 25° E of Balut Island (Municipality Of Sarangani) (Davao Occidental)",
+        "magnitude": 3.8,
+        "latitude": 3.62,
+        "longitude": 126.26,
+        "depth_km": 68.0,
+        "id": "36f8b7ef-6"
+    },
+    {
+        "time": 1777840800000,
+        "place": "022 km N 70° E of DoÃ±a Remedios Trinidad (Bulacan)",
+        "magnitude": 2.3,
+        "latitude": 15.03,
+        "longitude": 121.26,
+        "depth_km": 6.0,
+        "id": "e0612191-b"
+    },
+    {
+        "time": 1777840500000,
+        "place": "018 km N 35° E of Dinapigue (Isabela)",
+        "magnitude": 2.5,
+        "latitude": 16.66,
+        "longitude": 122.36,
+        "depth_km": 33.0,
+        "id": "ddd35465-a"
+    },
+    {
+        "time": 1777835820000,
+        "place": "018 km S 74° E of Socorro (Surigao Del Norte)",
+        "magnitude": 1.9,
+        "latitude": 9.57,
+        "longitude": 126.13,
+        "depth_km": 33.0,
+        "id": "82788dce-1"
+    },
+    {
+        "time": 1777835700000,
+        "place": "009 km S 19° E of Calanasan (Apayao)",
+        "magnitude": 2.1,
+        "latitude": 18.17,
+        "longitude": 121.07,
+        "depth_km": 23.0,
+        "id": "95b86724-2"
+    },
+    {
+        "time": 1777834500000,
+        "place": "024 km N 30° E of Burdeos (Quezon)",
+        "magnitude": 2.4,
+        "latitude": 15.03,
+        "longitude": 122.08,
+        "depth_km": 2.0,
+        "id": "b75ec4d3-9"
+    },
+    {
+        "time": 1777832760000,
+        "place": "012 km N 66° E of Banaybanay (Davao Oriental)",
+        "magnitude": 3.0,
+        "latitude": 7.01,
+        "longitude": 126.11,
+        "depth_km": 44.0,
+        "id": "31a4652e-9"
+    },
+    {
+        "time": 1777832280000,
+        "place": "043 km S 29° W of Sabtang (Batanes)",
+        "magnitude": 2.1,
+        "latitude": 19.99,
+        "longitude": 121.68,
+        "depth_km": 13.0,
+        "id": "89b9b413-1"
+    },
+    {
+        "time": 1777829820000,
+        "place": "019 km S 42° E of Bulalacao (Oriental Mindoro)",
+        "magnitude": 1.6,
+        "latitude": 12.2,
+        "longitude": 121.46,
+        "depth_km": 19.0,
+        "id": "dc812826-6"
+    },
+    {
+        "time": 1777828740000,
+        "place": "005 km N 81° W of San Miguel (Surigao Del Sur)",
+        "magnitude": 1.9,
+        "latitude": 8.95,
+        "longitude": 125.99,
+        "depth_km": 87.0,
+        "id": "47c4e2fe-8"
+    },
+    {
+        "time": 1777827300000,
+        "place": "016 km N 74° W of Bacarra (Ilocos Norte)",
+        "magnitude": 2.1,
+        "latitude": 18.29,
+        "longitude": 120.47,
+        "depth_km": 30.0,
+        "id": "1deb8b07-6"
+    },
+    {
+        "time": 1777825860000,
+        "place": "007 km N 33° W of Presentacion (Camarines Sur)",
+        "magnitude": 1.8,
+        "latitude": 13.76,
+        "longitude": 123.71,
+        "depth_km": 2.0,
+        "id": "9aeaf524-1"
+    },
+    {
+        "time": 1777825500000,
+        "place": "006 km S 02° W of Presentacion (Camarines Sur)",
+        "magnitude": 3.4,
+        "latitude": 13.66,
+        "longitude": 123.74,
+        "depth_km": 8.0,
+        "id": "f0ca0ef1-d"
+    },
+    {
+        "time": 1777821780000,
+        "place": "048 km N 25° W of Babuyan Island (Calayan) (Cagayan)",
+        "magnitude": 2.4,
+        "latitude": 19.91,
+        "longitude": 121.72,
+        "depth_km": 8.0,
+        "id": "02203c66-b"
+    },
+    {
+        "time": 1777821720000,
+        "place": "011 km N 17° E of Bunawan (Agusan Del Sur)",
+        "magnitude": 1.7,
+        "latitude": 8.27,
+        "longitude": 126.02,
+        "depth_km": 17.0,
+        "id": "24c4a09c-3"
+    },
+    {
+        "time": 1777821480000,
+        "place": "016 km S 81° E of Camiguin Island (Calayan) (Cagayan)",
+        "magnitude": 2.3,
+        "latitude": 18.89,
+        "longitude": 122.01,
+        "depth_km": 13.0,
+        "id": "c12d136d-3"
+    },
+    {
+        "time": 1777821420000,
+        "place": "020 km S 14° E of Socorro (Surigao Del Norte)",
+        "magnitude": 2.4,
+        "latitude": 9.44,
+        "longitude": 126.01,
+        "depth_km": 42.0,
+        "id": "63f24ecd-c"
+    },
+    {
+        "time": 1777816620000,
+        "place": "026 km N 70° W of Kalamansig (Sultan Kudarat)",
+        "magnitude": 2.2,
+        "latitude": 6.64,
+        "longitude": 123.83,
+        "depth_km": 6.0,
+        "id": "4b1a2bd0-0"
+    },
+    {
+        "time": 1777814820000,
+        "place": "046 km S 70° W of Lubang (Occidental Mindoro)",
+        "magnitude": 2.2,
+        "latitude": 13.72,
+        "longitude": 119.72,
+        "depth_km": 5.0,
+        "id": "55eefed9-6"
+    },
+    {
+        "time": 1777812600000,
+        "place": "045 km N 12° W of Bolinao (Pangasinan)",
+        "magnitude": 2.3,
+        "latitude": 16.79,
+        "longitude": 119.8,
+        "depth_km": 3.0,
+        "id": "46442ae4-1"
+    },
+    {
+        "time": 1777810860000,
+        "place": "164 km S 71° E of Jose Abad Santos (Davao Occidental)",
+        "magnitude": 4.4,
+        "latitude": 5.43,
+        "longitude": 127.04,
+        "depth_km": 30.0,
+        "id": "96d03e25-4"
+    },
+    {
+        "time": 1777808760000,
+        "place": "013 km N 58° E of Santa Cruz (Marinduque)",
+        "magnitude": 2.3,
+        "latitude": 13.54,
+        "longitude": 122.13,
+        "depth_km": 5.0,
+        "id": "c58ee600-4"
+    },
+    {
+        "time": 1777805040000,
+        "place": "030 km S 60° E of Marihatag (Surigao Del Sur)",
+        "magnitude": 2.1,
+        "latitude": 8.66,
+        "longitude": 126.53,
+        "depth_km": 33.0,
+        "id": "f0db4a9e-e"
+    },
+    {
+        "time": 1777804620000,
+        "place": "014 km S 56° W of Agoo (La Union)",
+        "magnitude": 1.9,
+        "latitude": 16.25,
+        "longitude": 120.26,
+        "depth_km": 9.0,
+        "id": "f146a456-2"
+    },
+    {
+        "time": 1777804380000,
+        "place": "009 km S 66° E of Banaybanay (Davao Oriental)",
+        "magnitude": 2.1,
+        "latitude": 6.93,
+        "longitude": 126.09,
+        "depth_km": 30.0,
+        "id": "d5d17d2a-5"
+    },
+    {
+        "time": 1777803360000,
+        "place": "040 km S 21° E of Tabina (Zamboanga Del Sur)",
+        "magnitude": 2.1,
+        "latitude": 7.12,
+        "longitude": 123.54,
+        "depth_km": 30.0,
+        "id": "cd950408-0"
+    },
+    {
+        "time": 1777796280000,
+        "place": "025 km S 74° W of Morong (Bataan)",
+        "magnitude": 1.3,
+        "latitude": 14.62,
+        "longitude": 120.05,
+        "depth_km": 41.0,
+        "id": "93f2600a-8"
+    },
+    {
+        "time": 1777793220000,
+        "place": "002 km N 24° W of Damulog (Bukidnon)",
+        "magnitude": 1.8,
+        "latitude": 7.5,
+        "longitude": 124.93,
+        "depth_km": 14.0,
+        "id": "03c18fe6-a"
+    },
+    {
+        "time": 1777791720000,
+        "place": "025 km N 34° W of Kalamansig (Sultan Kudarat)",
+        "magnitude": 2.4,
+        "latitude": 6.75,
+        "longitude": 123.92,
+        "depth_km": 8.0,
+        "id": "cb083256-3"
+    },
+    {
+        "time": 1777790940000,
+        "place": "023 km S 75° E of Marihatag (Surigao Del Sur)",
+        "magnitude": 1.5,
+        "latitude": 8.75,
+        "longitude": 126.5,
+        "depth_km": 33.0,
+        "id": "6b41c464-5"
+    },
+    {
+        "time": 1777788420000,
+        "place": "012 km S 20° E of Paluan (Occidental Mindoro)",
+        "magnitude": 1.4,
+        "latitude": 13.31,
+        "longitude": 120.5,
+        "depth_km": 27.0,
+        "id": "36ace807-d"
+    },
+    {
+        "time": 1777783320000,
+        "place": "112 km S 59° E of Governor Generoso (Davao Oriental)",
+        "magnitude": 2.9,
+        "latitude": 6.14,
+        "longitude": 126.94,
+        "depth_km": 86.0,
+        "id": "bdbdd4b8-c"
+    },
+    {
+        "time": 1777783260000,
+        "place": "004 km N 50° W of Dupax Del Norte (Nueva Vizcaya)",
+        "magnitude": 1.5,
+        "latitude": 16.33,
+        "longitude": 121.07,
+        "depth_km": 36.0,
+        "id": "a4eedd1b-4"
+    },
+    {
+        "time": 1777781160000,
+        "place": "019 km S 71° W of Governor Generoso (Davao Oriental)",
+        "magnitude": 1.8,
+        "latitude": 6.6,
+        "longitude": 125.91,
+        "depth_km": 69.0,
+        "id": "236d744e-9"
+    },
+    {
+        "time": 1777779360000,
+        "place": "018 km S 47° E of Cortes (Surigao Del Sur)",
+        "magnitude": 4.1,
+        "latitude": 9.16,
+        "longitude": 126.31,
+        "depth_km": 25.0,
+        "id": "19ab89b4-3"
+    },
+    {
+        "time": 1777772880000,
+        "place": "003 km S 11° E of San Agustin (Surigao Del Sur)",
+        "magnitude": 1.9,
+        "latitude": 8.71,
+        "longitude": 126.23,
+        "depth_km": 28.0,
+        "id": "a3f4b99f-5"
+    },
+    {
+        "time": 1777772280000,
+        "place": "023 km N 19° E of Santa Ana (Cagayan)",
+        "magnitude": 2.7,
+        "latitude": 18.66,
+        "longitude": 122.22,
+        "depth_km": 11.0,
+        "id": "8d7a474c-1"
+    },
+    {
+        "time": 1777771920000,
+        "place": "028 km S 83° E of Baganga (Davao Oriental)",
+        "magnitude": 2.9,
+        "latitude": 7.54,
+        "longitude": 126.81,
+        "depth_km": 24.0,
+        "id": "4e7b6dea-1"
+    },
+    {
+        "time": 1777770480000,
+        "place": "010 km S 89° E of Malapatan (Sarangani)",
+        "magnitude": 1.7,
+        "latitude": 5.97,
+        "longitude": 125.38,
+        "depth_km": 17.0,
+        "id": "8c7de43d-3"
+    },
+    {
+        "time": 1777769760000,
+        "place": "004 km N 65° E of Pio V. Corpus (Masbate)",
+        "magnitude": 2.0,
+        "latitude": 11.9,
+        "longitude": 124.08,
+        "depth_km": 10.0,
+        "id": "e081ab4d-e"
+    },
+    {
+        "time": 1777768380000,
+        "place": "050 km N 25° W of Lubang (Occidental Mindoro)",
+        "magnitude": 1.9,
+        "latitude": 14.27,
+        "longitude": 119.92,
+        "depth_km": 29.0,
+        "id": "a299d5c0-c"
+    },
+    {
+        "time": 1777767840000,
+        "place": "004 km S 76° E of Pio V. Corpus (Masbate)",
+        "magnitude": 2.4,
+        "latitude": 11.88,
+        "longitude": 124.08,
+        "depth_km": 3.0,
+        "id": "e0b8fa52-9"
+    },
+    {
+        "time": 1777766640000,
+        "place": "017 km N 51° W of City Of Bislig (Surigao Del Sur)",
+        "magnitude": 2.5,
+        "latitude": 8.31,
+        "longitude": 126.2,
+        "depth_km": 67.0,
+        "id": "c34eee01-8"
+    },
+    {
+        "time": 1777764120000,
+        "place": "034 km S 46° E of Tarragona (Davao Oriental)",
+        "magnitude": 2.7,
+        "latitude": 6.83,
+        "longitude": 126.67,
+        "depth_km": 140.0,
+        "id": "a084254a-4"
+    },
+    {
+        "time": 1777763940000,
+        "place": "032 km S 43° W of Caluya (Antique)",
+        "magnitude": 2.1,
+        "latitude": 11.72,
+        "longitude": 121.35,
+        "depth_km": 13.0,
+        "id": "20fcb638-e"
+    },
+    {
+        "time": 1777760340000,
+        "place": "016 km S 88° E of Socorro (Surigao Del Norte)",
+        "magnitude": 1.9,
+        "latitude": 9.61,
+        "longitude": 126.11,
+        "depth_km": 32.0,
+        "id": "0267fccb-7"
+    },
+    {
+        "time": 1777759140000,
+        "place": "007 km S 76° E of San Jose De Buan (Samar)",
+        "magnitude": 1.7,
+        "latitude": 12.04,
+        "longitude": 125.08,
+        "depth_km": 32.0,
+        "id": "5c1b1189-8"
+    },
+    {
+        "time": 1777755720000,
+        "place": "011 km S 46° W of Baganga (Davao Oriental)",
+        "magnitude": 2.1,
+        "latitude": 7.5,
+        "longitude": 126.49,
+        "depth_km": 92.0,
+        "id": "4c68b859-0"
+    },
+    {
+        "time": 1777755120000,
+        "place": "010 km N 28° E of Gigaquit (Surigao Del Norte)",
+        "magnitude": 1.8,
+        "latitude": 9.68,
+        "longitude": 125.75,
+        "depth_km": 106.0,
+        "id": "7d2e9b50-8"
+    },
+    {
+        "time": 1777750260000,
+        "place": "010 km S 52° E of San Juan (Batangas)",
+        "magnitude": 2.4,
+        "latitude": 13.77,
+        "longitude": 121.47,
+        "depth_km": 4.0,
+        "id": "98eb395d-3"
+    },
+    {
+        "time": 1777749360000,
+        "place": "097 km N 89° W of Sabtang (Batanes)",
+        "magnitude": 4.0,
+        "latitude": 20.36,
+        "longitude": 120.94,
+        "depth_km": 15.0,
+        "id": "275bd43d-7"
+    },
+    {
+        "time": 1777749000000,
+        "place": "004 km N 77° W of Burdeos (Quezon)",
+        "magnitude": 1.9,
+        "latitude": 14.85,
+        "longitude": 121.93,
+        "depth_km": 40.0,
+        "id": "1fcc332d-c"
+    },
+    {
+        "time": 1777746480000,
+        "place": "020 km N 07° E of Burdeos (Quezon)",
+        "magnitude": 1.5,
+        "latitude": 15.02,
+        "longitude": 121.99,
+        "depth_km": 16.0,
+        "id": "ed6274d8-6"
+    },
+    {
+        "time": 1777745100000,
+        "place": "113 km S 37° E of Governor Generoso (Davao Oriental)",
+        "magnitude": 3.1,
+        "latitude": 5.84,
+        "longitude": 126.68,
+        "depth_km": 27.0,
+        "id": "ff2b7dc9-2"
+    },
+    {
+        "time": 1777742700000,
+        "place": "021 km S 16° W of San Isidro (Northern Samar)",
+        "magnitude": 1.6,
+        "latitude": 12.2,
+        "longitude": 124.28,
+        "depth_km": 24.0,
+        "id": "971d77d4-0"
+    },
+    {
+        "time": 1777742040000,
+        "place": "004 km N 18° W of Alcantara (Romblon)",
+        "magnitude": 2.3,
+        "latitude": 12.29,
+        "longitude": 122.04,
+        "depth_km": 6.0,
+        "id": "62a85df4-c"
+    },
+    {
+        "time": 1777740360000,
+        "place": "101 km S 83° E of Guiuan (Eastern Samar)",
+        "magnitude": 3.8,
+        "latitude": 10.92,
+        "longitude": 126.64,
+        "depth_km": 19.0,
+        "id": "473f2b97-0"
+    },
+    {
+        "time": 1777739340000,
+        "place": "002 km S 41° W of Manaoag (Pangasinan)",
+        "magnitude": 1.9,
+        "latitude": 16.03,
+        "longitude": 120.48,
+        "depth_km": 124.0,
+        "id": "42b1c452-e"
+    },
+    {
+        "time": 1777737600000,
+        "place": "007 km N 08° W of Hinatuan (Surigao Del Sur)",
+        "magnitude": 1.7,
+        "latitude": 8.43,
+        "longitude": 126.33,
+        "depth_km": 14.0,
+        "id": "8ed19610-9"
+    },
+    {
+        "time": 1777736580000,
+        "place": "022 km N 22° W of Dalupiri Island (Calayan) (Cagayan)",
+        "magnitude": 1.9,
+        "latitude": 19.3,
+        "longitude": 121.13,
+        "depth_km": 34.0,
+        "id": "35806d59-0"
+    },
+    {
+        "time": 1777736280000,
+        "place": "005 km S 70° E of Macrohon (Southern Leyte)",
+        "magnitude": 4.1,
+        "latitude": 10.06,
+        "longitude": 124.98,
+        "depth_km": 14.0,
+        "id": "f6f27589-a"
+    },
+    {
+        "time": 1777735980000,
+        "place": "008 km S 14° E of Dalupiri Island (Calayan) (Cagayan)",
+        "magnitude": 2.1,
+        "latitude": 19.04,
+        "longitude": 121.23,
+        "depth_km": 26.0,
+        "id": "3d292348-a"
+    },
+    {
+        "time": 1777731960000,
+        "place": "020 km S 63° W of Dalupiri Island (Calayan) (Cagayan)",
+        "magnitude": 4.1,
+        "latitude": 19.02,
+        "longitude": 121.03,
+        "depth_km": 6.0,
+        "id": "51f93b8e-2"
+    },
+    {
+        "time": 1777730340000,
+        "place": "002 km S 24° E of Pagudpud (Ilocos Norte)",
+        "magnitude": 2.0,
+        "latitude": 18.54,
+        "longitude": 120.79,
+        "depth_km": 15.0,
+        "id": "bc1200a4-d"
+    },
+    {
+        "time": 1777729980000,
+        "place": "011 km S 89° E of Dinapigue (Isabela)",
+        "magnitude": 1.9,
+        "latitude": 16.52,
+        "longitude": 122.37,
+        "depth_km": 25.0,
+        "id": "0ebcbe6e-9"
+    },
+    {
+        "time": 1777726920000,
+        "place": "044 km N 75° W of Jose Dalman (Zamboanga Del Norte)",
+        "magnitude": 2.0,
+        "latitude": 8.54,
+        "longitude": 122.64,
+        "depth_km": 28.0,
+        "id": "48120ead-6"
+    },
+    {
+        "time": 1777725420000,
+        "place": "024 km N 26° E of Burdeos (Quezon)",
+        "magnitude": 2.1,
+        "latitude": 15.04,
+        "longitude": 122.06,
+        "depth_km": 4.0,
+        "id": "961600b2-1"
+    },
+    {
+        "time": 1777725360000,
+        "place": "006 km N 74° E of Las Nieves (Agusan Del Norte)",
+        "magnitude": 2.3,
+        "latitude": 8.75,
+        "longitude": 125.65,
+        "depth_km": 32.0,
+        "id": "28ff6a45-a"
+    },
+    {
+        "time": 1777721280000,
+        "place": "022 km N 65° E of New Bataan (Davao De Oro)",
+        "magnitude": 2.2,
+        "latitude": 7.63,
+        "longitude": 126.32,
+        "depth_km": 34.0,
+        "id": "72758380-3"
+    },
+    {
+        "time": 1777719900000,
+        "place": "013 km S 50° W of Calatagan (Batangas)",
+        "magnitude": 1.9,
+        "latitude": 13.76,
+        "longitude": 120.54,
+        "depth_km": 85.0,
+        "id": "d169bd0e-1"
+    },
+    {
+        "time": 1777715760000,
+        "place": "010 km N 80° E of San Juan (Ilocos Sur)",
+        "magnitude": 2.2,
+        "latitude": 17.76,
+        "longitude": 120.55,
+        "depth_km": 45.0,
+        "id": "58957266-0"
+    },
+    {
+        "time": 1777713780000,
+        "place": "021 km N 77° W of Calatagan (Batangas)",
+        "magnitude": 1.8,
+        "latitude": 13.88,
+        "longitude": 120.45,
+        "depth_km": 102.0,
+        "id": "9e8120fe-d"
+    },
+    {
+        "time": 1777703400000,
+        "place": "165 km S 47° E of Governor Generoso (Davao Oriental)",
+        "magnitude": 2.9,
+        "latitude": 5.63,
+        "longitude": 127.17,
+        "depth_km": 142.0,
+        "id": "aaf3e49a-d"
+    },
+    {
+        "time": 1777702740000,
+        "place": "004 km S 72° E of Jabonga (Agusan Del Norte)",
+        "magnitude": 2.6,
+        "latitude": 9.33,
+        "longitude": 125.55,
+        "depth_km": 5.0,
+        "id": "1b643c73-2"
+    },
+    {
+        "time": 1777692600000,
+        "place": "016 km S 78° W of Dinalungan (Aurora)",
+        "magnitude": 2.5,
+        "latitude": 16.11,
+        "longitude": 121.81,
+        "depth_km": 14.0,
+        "id": "e57f76a2-1"
+    },
+    {
+        "time": 1777686480000,
+        "place": "005 km S 54° W of Bangui (Ilocos Norte)",
+        "magnitude": 2.3,
+        "latitude": 18.51,
+        "longitude": 120.73,
+        "depth_km": 8.0,
+        "id": "4c979f7c-b"
+    },
+    {
+        "time": 1777686420000,
+        "place": "006 km N 28° E of Cortes (Surigao Del Sur)",
+        "magnitude": 2.3,
+        "latitude": 9.32,
+        "longitude": 126.22,
+        "depth_km": 29.0,
+        "id": "39a36b50-9"
+    },
+    {
+        "time": 1777681740000,
+        "place": "042 km N 50° E of Siruma (Camarines Sur)",
+        "magnitude": 2.5,
+        "latitude": 14.27,
+        "longitude": 123.55,
+        "depth_km": 6.0,
+        "id": "c5be62aa-0"
+    },
+    {
+        "time": 1777678380000,
+        "place": "014 km S 80° W of Abra De Ilog (Occidental Mindoro)",
+        "magnitude": 1.8,
+        "latitude": 13.42,
+        "longitude": 120.6,
+        "depth_km": 16.0,
+        "id": "9284e390-c"
+    },
+    {
+        "time": 1777675680000,
+        "place": "020 km N 74° E of City Of Bogo (Cebu)",
+        "magnitude": 1.4,
+        "latitude": 11.1,
+        "longitude": 124.15,
+        "depth_km": 8.0,
+        "id": "cef7c8dc-d"
+    },
+    {
+        "time": 1777674060000,
+        "place": "008 km N 50° E of Dumalneg (Ilocos Norte)",
+        "magnitude": 1.6,
+        "latitude": 18.57,
+        "longitude": 120.86,
+        "depth_km": 4.0,
+        "id": "a673190e-e"
+    },
+    {
+        "time": 1777673880000,
+        "place": "110 km S 46° E of Governor Generoso (Davao Oriental)",
+        "magnitude": 2.5,
+        "latitude": 5.96,
+        "longitude": 126.79,
+        "depth_km": 28.0,
+        "id": "efb724fb-5"
+    },
+    {
+        "time": 1777669800000,
+        "place": "021 km S 66° W of Don Marcelino (Davao Occidental)",
+        "magnitude": 2.8,
+        "latitude": 6.12,
+        "longitude": 125.52,
+        "depth_km": 172.0,
+        "id": "ca01aeb8-7"
+    },
+    {
+        "time": 1777669440000,
+        "place": "006 km S 83° E of Lupon (Davao Oriental)",
+        "magnitude": 2.0,
+        "latitude": 6.89,
+        "longitude": 126.07,
+        "depth_km": 29.0,
+        "id": "9c829b75-2"
+    },
+    {
+        "time": 1777669020000,
+        "place": "020 km N 25° E of Calanasan (Apayao)",
+        "magnitude": 2.1,
+        "latitude": 18.42,
+        "longitude": 121.12,
+        "depth_km": 82.0,
+        "id": "391a1cd0-7"
+    },
+    {
+        "time": 1777666920000,
+        "place": "008 km N 13° W of Governor Generoso (Davao Oriental)",
+        "magnitude": 1.9,
+        "latitude": 6.73,
+        "longitude": 126.06,
+        "depth_km": 28.0,
+        "id": "710603b6-d"
+    },
+    {
+        "time": 1777665000000,
+        "place": "027 km S 64° W of Datu Blah T. Sinsuat (Maguindanao Del Norte)",
+        "magnitude": 1.8,
+        "latitude": 6.96,
+        "longitude": 123.8,
+        "depth_km": 19.0,
+        "id": "fa2f1461-1"
+    },
+    {
+        "time": 1777663680000,
+        "place": "017 km N 46° W of Tuburan (Cebu)",
+        "magnitude": 2.4,
+        "latitude": 10.84,
+        "longitude": 123.71,
+        "depth_km": 22.0,
+        "id": "a4f2cb50-2"
+    },
+    {
+        "time": 1777662840000,
+        "place": "012 km N 48° E of City Of Tandag (Surigao Del Sur)",
+        "magnitude": 2.3,
+        "latitude": 9.15,
+        "longitude": 126.26,
+        "depth_km": 10.0,
+        "id": "7c832e22-9"
+    },
+    {
+        "time": 1777660440000,
+        "place": "005 km N 10° E of Hinatuan (Surigao Del Sur)",
+        "magnitude": 2.4,
+        "latitude": 8.41,
+        "longitude": 126.35,
+        "depth_km": 118.0,
+        "id": "c9410a9e-b"
+    },
+    {
+        "time": 1777660200000,
+        "place": "019 km S 09° W of Calatagan (Batangas)",
+        "magnitude": 2.6,
+        "latitude": 13.66,
+        "longitude": 120.6,
+        "depth_km": 155.0,
+        "id": "7136658a-1"
+    },
+    {
+        "time": 1777659120000,
+        "place": "014 km N 72° E of City Of Bayugan (Agusan Del Sur)",
+        "magnitude": 3.1,
+        "latitude": 8.75,
+        "longitude": 125.87,
+        "depth_km": 10.0,
+        "id": "a23720da-7"
+    },
+    {
+        "time": 1777655580000,
+        "place": "007 km S 32° E of Tuba (Benguet)",
+        "magnitude": 2.3,
+        "latitude": 16.34,
+        "longitude": 120.59,
+        "depth_km": 8.0,
+        "id": "955e49a8-1"
+    },
+    {
+        "time": 1777655580000,
+        "place": "014 km N 87° E of Manay (Davao Oriental)",
+        "magnitude": 2.4,
+        "latitude": 7.22,
+        "longitude": 126.66,
+        "depth_km": 11.0,
+        "id": "fea654fb-1"
+    },
+    {
+        "time": 1777655400000,
+        "place": "037 km N 08° W of Babuyan Island (Calayan) (Cagayan)",
+        "magnitude": 3.4,
+        "latitude": 19.84,
+        "longitude": 121.86,
+        "depth_km": 3.0,
+        "id": "c9c777ec-e"
+    },
+    {
+        "time": 1777654860000,
+        "place": "098 km N 57° W of Dalupiri Island (Calayan) (Cagayan)",
+        "magnitude": 2.5,
+        "latitude": 19.6,
+        "longitude": 120.42,
+        "depth_km": 13.0,
+        "id": "4436a7e6-e"
+    },
+    {
+        "time": 1777653840000,
+        "place": "050 km S 47° E of Baler (Aurora)",
+        "magnitude": 2.0,
+        "latitude": 15.45,
+        "longitude": 121.91,
+        "depth_km": 7.0,
+        "id": "3604e890-c"
+    },
+    {
+        "time": 1777653540000,
+        "place": "034 km S 50° W of Datu Blah T. Sinsuat (Maguindanao Del Norte)",
+        "magnitude": 2.9,
+        "latitude": 6.87,
+        "longitude": 123.78,
+        "depth_km": 2.0,
+        "id": "cf522386-9"
+    },
+    {
+        "time": 1777653000000,
+        "place": "025 km N 82° W of Fuga Island (Aparri) (Cagayan)",
+        "magnitude": 1.5,
+        "latitude": 18.88,
+        "longitude": 121.13,
+        "depth_km": 30.0,
+        "id": "7ac1c73e-f"
+    },
+    {
+        "time": 1777652100000,
+        "place": "005 km S 85° E of Alilem (Ilocos Sur)",
+        "magnitude": 2.4,
+        "latitude": 16.88,
+        "longitude": 120.58,
+        "depth_km": 85.0,
+        "id": "062e9ef1-5"
+    },
+    {
+        "time": 1777651320000,
+        "place": "050 km S 48° E of Baler (Aurora)",
+        "magnitude": 3.1,
+        "latitude": 15.46,
+        "longitude": 121.91,
+        "depth_km": 7.0,
+        "id": "c8dbd8da-7"
+    },
+    {
+        "time": 1777648620000,
+        "place": "077 km S 58° W of Sabtang (Batanes)",
+        "magnitude": 2.5,
+        "latitude": 19.97,
+        "longitude": 121.25,
+        "depth_km": 11.0,
+        "id": "3a695242-d"
+    },
+    {
+        "time": 1777642560000,
+        "place": "065 km N 05° W of Calayan (Cagayan)",
+        "magnitude": 3.6,
+        "latitude": 19.84,
+        "longitude": 121.42,
+        "depth_km": 13.0,
+        "id": "2c6ebdd7-4"
+    },
+    {
+        "time": 1777641300000,
+        "place": "017 km S 86° W of Governor Generoso (Davao Oriental)",
+        "magnitude": 1.9,
+        "latitude": 6.64,
+        "longitude": 125.92,
+        "depth_km": 25.0,
+        "id": "de7a4316-7"
+    },
+    {
+        "time": 1777639800000,
+        "place": "039 km N 06° W of Burgos (Surigao Del Norte)",
+        "magnitude": 1.7,
+        "latitude": 10.37,
+        "longitude": 126.04,
+        "depth_km": 38.0,
+        "id": "d2f28f64-2"
+    },
+    {
+        "time": 1777639320000,
+        "place": "008 km S 52° E of Tingloy (Batangas)",
+        "magnitude": 1.5,
+        "latitude": 13.61,
+        "longitude": 120.93,
+        "depth_km": 14.0,
+        "id": "9ab4e60b-9"
+    },
+    {
+        "time": 1777635840000,
+        "place": "012 km S 45° W of Picong (Lanao Del Sur)",
+        "magnitude": 1.4,
+        "latitude": 7.59,
+        "longitude": 123.89,
+        "depth_km": 32.0,
+        "id": "c5a57d98-0"
+    },
+    {
+        "time": 1777635000000,
+        "place": "017 km S 24° E of General Luna (Surigao Del Norte)",
+        "magnitude": 2.6,
+        "latitude": 9.64,
+        "longitude": 126.22,
+        "depth_km": 16.0,
+        "id": "26fa531d-0"
+    },
+    {
+        "time": 1777632780000,
+        "place": "005 km N 49° E of City Of Calaca (Batangas)",
+        "magnitude": 1.5,
+        "latitude": 13.96,
+        "longitude": 120.84,
+        "depth_km": 16.0,
+        "id": "b4368637-2"
+    },
+    {
+        "time": 1777627140000,
+        "place": "006 km N 64° W of Asipulo (Ifugao)",
+        "magnitude": 1.8,
+        "latitude": 16.74,
+        "longitude": 121.02,
+        "depth_km": 33.0,
+        "id": "3e6a2c77-c"
+    },
+    {
+        "time": 1777622160000,
+        "place": "012 km N 38° E of San Jose De Buan (Samar)",
+        "magnitude": 1.7,
+        "latitude": 12.14,
+        "longitude": 125.09,
+        "depth_km": 37.0,
+        "id": "302ad4ce-7"
+    },
+    {
+        "time": 1777619220000,
+        "place": "014 km N 66° W of Santa Monica (Surigao Del Norte)",
+        "magnitude": 2.5,
+        "latitude": 10.07,
+        "longitude": 125.92,
+        "depth_km": 2.0,
+        "id": "bf26efd9-f"
+    },
+    {
+        "time": 1777613940000,
+        "place": "001 km N 81° W of Kiblawan (Davao Del Sur)",
+        "magnitude": 2.7,
+        "latitude": 6.62,
+        "longitude": 125.24,
+        "depth_km": 33.0,
+        "id": "00062b36-b"
+    },
+    {
+        "time": 1777613040000,
+        "place": "002 km N 47° W of Hinatuan (Surigao Del Sur)",
+        "magnitude": 2.3,
+        "latitude": 8.38,
+        "longitude": 126.33,
+        "depth_km": 83.0,
+        "id": "0e653bfc-1"
+    },
+    {
+        "time": 1777606800000,
+        "place": "008 km N 80° W of Palauig (Zambales)",
+        "magnitude": 1.7,
+        "latitude": 15.45,
+        "longitude": 119.84,
+        "depth_km": 15.0,
+        "id": "33bf8086-5"
+    },
+    {
+        "time": 1777604100000,
+        "place": "014 km North of Dalupiri Island (Calayan) (Cagayan)",
+        "magnitude": 2.2,
+        "latitude": 19.24,
+        "longitude": 121.21,
+        "depth_km": 32.0,
+        "id": "f5067361-f"
+    },
+    {
+        "time": 1777603080000,
+        "place": "016 km S 31° E of General Luna (Surigao Del Norte)",
+        "magnitude": 1.5,
+        "latitude": 9.65,
+        "longitude": 126.23,
+        "depth_km": 30.0,
+        "id": "5df9a238-4"
+    },
+    {
+        "time": 1777599120000,
+        "place": "030 km N 57° E of Lubang (Occidental Mindoro)",
+        "magnitude": 2.0,
+        "latitude": 14.01,
+        "longitude": 120.35,
+        "depth_km": 57.0,
+        "id": "692f0f67-0"
+    },
+    {
+        "time": 1777597020000,
+        "place": "008 km N 57° E of San Agustin (Surigao Del Sur)",
+        "magnitude": 2.2,
+        "latitude": 8.78,
+        "longitude": 126.28,
+        "depth_km": 33.0,
+        "id": "0c8dd8ee-1"
+    },
+    {
+        "time": 1777594560000,
+        "place": "024 km S 47° E of Don Marcelino (Davao Occidental)",
+        "magnitude": 3.3,
+        "latitude": 6.05,
+        "longitude": 125.85,
+        "depth_km": 150.0,
+        "id": "e63cf63b-c"
+    },
+    {
+        "time": 1777592280000,
+        "place": "006 km S 46° E of Paracelis (Mountain Province)",
+        "magnitude": 3.8,
+        "latitude": 17.14,
+        "longitude": 121.45,
+        "depth_km": 10.0,
+        "id": "646ace67-a"
+    },
+    {
+        "time": 1777588740000,
+        "place": "025 km N 31° E of Burdeos (Quezon)",
+        "magnitude": 2.1,
+        "latitude": 15.04,
+        "longitude": 122.09,
+        "depth_km": 2.0,
+        "id": "d77d3cdd-3"
+    },
+    {
+        "time": 1777587120000,
+        "place": "020 km N 08° W of Burdeos (Quezon)",
+        "magnitude": 1.9,
+        "latitude": 15.03,
+        "longitude": 121.94,
+        "depth_km": 3.0,
+        "id": "5e737bfb-7"
+    },
+    {
+        "time": 1777586760000,
+        "place": "050 km S 89° W of Lubang (Occidental Mindoro)",
+        "magnitude": 3.6,
+        "latitude": 13.85,
+        "longitude": 119.66,
+        "depth_km": 27.0,
+        "id": "f4699177-a"
+    },
+    {
+        "time": 1777586040000,
+        "place": "003 km N 47° W of Burdeos (Quezon)",
+        "magnitude": 1.6,
+        "latitude": 14.86,
+        "longitude": 121.95,
+        "depth_km": 28.0,
+        "id": "7b67ada6-9"
+    },
+    {
+        "time": 1777585860000,
+        "place": "009 km S 60° E of Camiguin Island (Calayan) (Cagayan)",
+        "magnitude": 2.1,
+        "latitude": 18.87,
+        "longitude": 121.94,
+        "depth_km": 10.0,
+        "id": "5fa47ad1-c"
+    },
+    {
+        "time": 1777585560000,
+        "place": "017 km S 16° E of Camiguin Island (Calayan) (Cagayan)",
+        "magnitude": 1.4,
+        "latitude": 18.76,
+        "longitude": 121.91,
+        "depth_km": 8.0,
+        "id": "2d156da4-1"
+    },
+    {
+        "time": 1777585500000,
+        "place": "009 km S 62° E of Camiguin Island (Calayan) (Cagayan)",
+        "magnitude": 2.3,
+        "latitude": 18.87,
+        "longitude": 121.94,
+        "depth_km": 12.0,
+        "id": "39acad90-3"
+    },
+    {
+        "time": 1777583460000,
+        "place": "006 km S 54° E of Lubang (Occidental Mindoro)",
+        "magnitude": 2.1,
+        "latitude": 13.83,
+        "longitude": 120.17,
+        "depth_km": 37.0,
+        "id": "fb82614d-a"
+    },
+    {
+        "time": 1777578480000,
+        "place": "019 km N 25° W of Abra De Ilog (Occidental Mindoro)",
+        "magnitude": 2.9,
+        "latitude": 13.6,
+        "longitude": 120.65,
+        "depth_km": 111.0,
+        "id": "4357b2d4-2"
+    },
+    {
+        "time": 1777578120000,
+        "place": "048 km S 70° E of Manay (Davao Oriental)",
+        "magnitude": 2.1,
+        "latitude": 7.06,
+        "longitude": 126.95,
+        "depth_km": 11.0,
+        "id": "e1573e79-2"
+    },
+    {
+        "time": 1777577580000,
+        "place": "013 km S 04° W of Calatagan (Batangas)",
+        "magnitude": 2.3,
+        "latitude": 13.71,
+        "longitude": 120.62,
+        "depth_km": 108.0,
+        "id": "d5d1288a-b"
+    },
+    {
+        "time": 1777576320000,
+        "place": "028 km N 42° E of Dilasag (Aurora)",
+        "magnitude": 2.0,
+        "latitude": 16.58,
+        "longitude": 122.38,
+        "depth_km": 3.0,
+        "id": "2d334634-2"
+    },
+    {
+        "time": 1777575600000,
+        "place": "004 km S 49° E of Tagbina (Surigao Del Sur)",
+        "magnitude": 2.5,
+        "latitude": 8.44,
+        "longitude": 126.19,
+        "depth_km": 9.0,
+        "id": "7cf55a82-5"
+    },
+    {
+        "time": 1777575360000,
+        "place": "009 km N 29° W of Danao (Bohol)",
+        "magnitude": 1.9,
+        "latitude": 10.02,
+        "longitude": 124.18,
+        "depth_km": 6.0,
+        "id": "d9fdb476-b"
+    },
+    {
+        "time": 1777574100000,
+        "place": "042 km S 72° E of Manay (Davao Oriental)",
+        "magnitude": 3.4,
+        "latitude": 7.09,
+        "longitude": 126.91,
+        "depth_km": 2.0,
+        "id": "880178f9-a"
+    },
+    {
+        "time": 1777573560000,
+        "place": "024 km S 65° E of Gonzaga (Cagayan)",
+        "magnitude": 1.6,
+        "latitude": 18.17,
+        "longitude": 122.2,
+        "depth_km": 10.0,
+        "id": "0521ef87-7"
+    },
+    {
+        "time": 1777572780000,
+        "place": "016 km N 80° W of Calatagan (Batangas)",
+        "magnitude": 2.7,
+        "latitude": 13.86,
+        "longitude": 120.49,
+        "depth_km": 104.0,
+        "id": "d0d196fe-1"
+    },
+    {
+        "time": 1777571880000,
+        "place": "033 km N 55° E of Hinatuan (Surigao Del Sur)",
+        "magnitude": 2.5,
+        "latitude": 8.54,
+        "longitude": 126.58,
+        "depth_km": 3.0,
+        "id": "a4cff0b6-7"
+    },
+    {
+        "time": 1777566180000,
+        "place": "033 km N 56° E of General Luna (Surigao Del Norte)",
+        "magnitude": 2.6,
+        "latitude": 9.95,
+        "longitude": 126.41,
+        "depth_km": 3.0,
+        "id": "f83b8c34-f"
+    },
+    {
+        "time": 1777566000000,
+        "place": "006 km S 28° E of Bantayan (Cebu)",
+        "magnitude": 1.9,
+        "latitude": 11.12,
+        "longitude": 123.74,
+        "depth_km": 30.0,
+        "id": "b7f4c2e4-d"
+    },
+    {
+        "time": 1777565220000,
+        "place": "066 km S 63° E of Don Marcelino (Davao Occidental)",
+        "magnitude": 3.6,
+        "latitude": 5.92,
+        "longitude": 126.23,
+        "depth_km": 139.0,
+        "id": "cd2d0fb5-4"
+    }
+]
